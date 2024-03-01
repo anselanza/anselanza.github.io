@@ -57,4 +57,4 @@ export const getStaticPaths = async () => {
 
 export type ProjectType = InferGetStaticPropsType<
   typeof getStaticProps
->["data"]["post"];
+>["data"]["project"];
