@@ -18,6 +18,18 @@ query pageQuery {
       }
     }
   }
+  projectConnection {
+    edges {
+      node {
+        id
+        title
+        excerpt
+        _sys {
+          filename
+        }
+      }
+    }
+  }
 }
 
 query contentQuery($relativePath: String!) {

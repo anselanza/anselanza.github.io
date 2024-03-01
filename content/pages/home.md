@@ -1,13 +1,15 @@
 ---
-title: Tina Cloud Starter
+title: Home Page
 blocks:
-  - headline: Welcome to the Tina Starter
+  - tagline: 'Smoke and mirrors, code and magic'
+    headline: Stephen Buchanan
     text: >
-      This project is set up to show you the basics of working with Tina. You're
-      looking at the landing page, which pulls content from
-      `content/pages/home.md`, components from components/blocks, and puts them
-      all together in `pages/[filename].tsx`, all based on a config
-      `tina/config.tsx`.
+      I am happy to call myself a Creative Technologist, but not in the sense of
+      “a designer with some hacky coding skills”.
+
+
+      I have the software engineering capabilities and in-depth experience
+      required to turn ideas into reality.
     actions:
       - label: Get Started
         type: button
@@ -18,10 +20,8 @@ blocks:
         icon: false
         link: /posts
     image:
-      src: /uploads/unsplash-75EFpyXu3Wg.jpg
-      alt: >-
-        Photo of palm trees at sunset by Adam Birkett -
-        unsplash.com/photos/75EFpyXu3Wg
+      src: /uploads/visa-photo.JPG
+      alt: Portrait
     color: default
     _template: hero
   - items:
@@ -56,6 +56,4 @@ blocks:
     color: primary
     _template: testimonial
 ---
-
-
 

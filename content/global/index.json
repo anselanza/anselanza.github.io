@@ -5,7 +5,7 @@
       "color": "orange",
       "style": "float"
     },
-    "name": "Tina Starter",
+    "name": "Stephen Buchanan",
     "color": "default",
     "nav": [
       {
@@ -13,12 +13,12 @@
         "label": "Home"
       },
       {
-        "href": "about",
-        "label": "About"
+        "href": "contact",
+        "label": "Contact"
       },
       {
-        "href": "posts",
-        "label": "Blog"
+        "href": "projects",
+        "label": "Projects"
       }
     ]
   },
