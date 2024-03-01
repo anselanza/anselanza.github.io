@@ -34,6 +34,16 @@ const Project: Collection = {
       name: "_body",
       isBody: true,
     },
+    {
+      type: "string",
+      name: "tags",
+      label: "Tags",
+      description: "Tags for this project",
+      list: true,
+      ui: {
+        component: "tags",
+      },
+    },
   ],
 };
 

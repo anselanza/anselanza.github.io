@@ -11,14 +11,14 @@ blocks:
       I have the software engineering capabilities and in-depth experience
       required to turn ideas into reality.
     actions:
-      - label: Get Started
+      - label: View Projects
         type: button
         icon: true
-        link: /posts
-      - label: Read Blog
+        link: /projects
+      - label: More about me
         type: link
         icon: false
-        link: /posts
+        link: /about
     image:
       src: /uploads/visa-photo.JPG
       alt: Portrait

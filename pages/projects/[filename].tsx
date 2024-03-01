@@ -28,7 +28,7 @@ export default function ProjectPage(
 }
 
 export const getStaticProps = async ({ params }) => {
-  const tinaProps = await client.queries.blogPostQuery({
+  const tinaProps = await client.queries.projectQuery({
     relativePath: `${params.filename}.mdx`,
   });
   return {

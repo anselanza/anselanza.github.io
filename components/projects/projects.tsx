@@ -3,7 +3,6 @@ import Link from "next/link";
 import { TinaMarkdown } from "tinacms/dist/rich-text";
 import { BsArrowRight } from "react-icons/bs";
 import { useTheme } from "../layout";
-import format from "date-fns/format";
 import { ProjectsType } from "../../pages/projects";
 
 export const Projects = ({ data }: { data: ProjectsType[] }) => {
@@ -21,17 +20,12 @@ export const Projects = ({ data }: { data: ProjectsType[] }) => {
 
   return (
     <>
-      {data.map((postData) => {
-        const post = postData.node;
-        const date = new Date(post.date);
-        let formattedDate = "";
-        if (!isNaN(date.getTime())) {
-          formattedDate = format(date, "MMM dd, yyyy");
-        }
+      {data.map((projectData) => {
+        const project = projectData.node;
         return (
           <Link
-            key={post._sys.filename}
-            href={`/posts/` + post._sys.filename}
+            key={project._sys.filename}
+            href={`/projects/` + project._sys.filename}
             className="dark:to-gray-1000 group mb-8 block rounded-md bg-gray-50 bg-gradient-to-br from-gray-50 to-gray-100 px-6 py-10 shadow-sm transition-all duration-150 ease-out last:mb-0 hover:to-gray-50 hover:shadow-md sm:px-8 md:px-10 dark:from-gray-900 dark:hover:to-gray-800"
           >
             <h3
@@ -39,35 +33,13 @@ export const Projects = ({ data }: { data: ProjectsType[] }) => {
                 titleColorClasses[theme.color]
               }`}
             >
-              {post.title}{" "}
+              {project.title}{" "}
               <span className="inline-block opacity-0 transition-all duration-300 ease-out group-hover:opacity-100">
                 <BsArrowRight className="-mt-1 ml-1 inline-block h-8 w-auto opacity-70" />
               </span>
             </h3>
             <div className="prose dark:prose-dark mb-5 w-full max-w-none opacity-70">
-              <TinaMarkdown content={post.excerpt} />
-            </div>
-            <div className="flex items-center">
-              <div className="mr-2 flex-shrink-0">
-                <img
-                  className="h-10 w-10 rounded-full object-cover shadow-sm"
-                  src={post?.author?.avatar}
-                  alt={post?.author?.name}
-                />
-              </div>
-              <p className="text-base font-medium text-gray-600 group-hover:text-gray-800 dark:text-gray-200 dark:group-hover:text-white">
-                {post?.author?.name}
-              </p>
-              {formattedDate !== "" && (
-                <>
-                  <span className="mx-2 font-bold text-gray-200 dark:text-gray-500">
-                    —
-                  </span>
-                  <p className="dark:group-hover:text-gray-150 text-base text-gray-400 group-hover:text-gray-500 dark:text-gray-300">
-                    {formattedDate}
-                  </p>
-                </>
-              )}
+              <TinaMarkdown content={project.excerpt} />
             </div>
           </Link>
         );
