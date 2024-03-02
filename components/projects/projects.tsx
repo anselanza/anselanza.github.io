@@ -41,6 +41,9 @@ export const Projects = ({ data }: { data: ProjectsType[] }) => {
             <div className="prose dark:prose-dark mb-5 w-full max-w-none opacity-70">
               <TinaMarkdown content={project.excerpt} />
             </div>
+            <div>
+              <img src={project.heroImg} />
+            </div>
           </Link>
         );
       })}

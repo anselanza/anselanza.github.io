@@ -5,6 +5,7 @@ import { useTheme } from "../layout";
 import format from "date-fns/format";
 import { ProjectType } from "../../pages/projects/[filename]";
 import { tinaField } from "tinacms/dist/react";
+import { TinaMarkdown } from "tinacms/dist/rich-text";
 
 export const Project = (props: ProjectType) => {
   const theme = useTheme();
@@ -22,12 +23,6 @@ export const Project = (props: ProjectType) => {
       "from-yellow-400 to-yellow-500 dark:from-yellow-300 dark:to-yellow-500",
   };
 
-  const date = new Date(props.date);
-  let formattedDate = "";
-  if (!isNaN(date.getTime())) {
-    formattedDate = format(date, "MMM dd, yyyy");
-  }
-
   return (
     <Section className="flex-1">
       <Container width="small" className={`flex-1 pb-2`} size="large">
@@ -43,38 +38,6 @@ export const Project = (props: ProjectType) => {
             {props.title}
           </span>
         </h2>
-        <div
-          data-tina-field={tinaField(props, "author")}
-          className="mb-16 flex items-center justify-center"
-        >
-          {props.author && (
-            <>
-              <div className="mr-4 flex-shrink-0">
-                <img
-                  data-tina-field={tinaField(props.author, "avatar")}
-                  className="h-14 w-14 rounded-full object-cover shadow-sm"
-                  src={props.author.avatar}
-                  alt={props.author.name}
-                />
-              </div>
-              <p
-                data-tina-field={tinaField(props.author, "name")}
-                className="text-base font-medium text-gray-600 group-hover:text-gray-800 dark:text-gray-200 dark:group-hover:text-white"
-              >
-                {props.author.name}
-              </p>
-              <span className="mx-2 font-bold text-gray-200 dark:text-gray-500">
-                —
-              </span>
-            </>
-          )}
-          <p
-            data-tina-field={tinaField(props, "date")}
-            className="dark:group-hover:text-gray-150 text-base text-gray-400 group-hover:text-gray-500 dark:text-gray-300"
-          >
-            {formattedDate}
-          </p>
-        </div>
       </Container>
       {props.heroImg && (
         <div className="w-full px-4">
@@ -99,7 +62,13 @@ export const Project = (props: ProjectType) => {
         <div
           data-tina-field={tinaField(props, "_body")}
           className="prose dark:prose-dark w-full max-w-none"
-        ></div>
+        >
+          <TinaMarkdown content={props._body} />
+        </div>
+      </Container>
+      <Container width="small" size="small">
+        Tags:
+        {props.tags?.map((tag, index) => <span> {tag}</span>)}
       </Container>
     </Section>
   );

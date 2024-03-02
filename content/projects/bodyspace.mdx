@@ -1,0 +1,21 @@
+---
+title: Fragrance and Fashion
+heroImg: /uploads/mugler-body.jpg
+excerpt: >
+  My contribution to this project was twofold: **LIDAR User Tracking** and **3D
+  Spatial Audio Programming**
+tags:
+  - lidar
+  - nodejs
+  - installations
+---
+
+This was a multi-sensory pop-up store installation for Mugler, located in The Cornershop at London's Selfridges.
+
+## LIDAR User Tracking
+
+Three SLAMTEC RP LIDAR devices were concealed under the central fixture in the installation. The scanning data from these sensors was sent to a NodeJS application which handled calibration and utilised a DBSCAN clustering algorithm to turn overlapping point data into useable "human tracking" data for the central show control system.
+
+## 3D Spatial Audio
+
+The 3D Audio utilised [Spatial Inc](https://www.spatialinc.com/) software. I collaborated with a composer/producer on this project: he created music tracks and mono "stems" for various sound effects, which I then turned into 3D audio sound objects, complete with animations (e.g. changing "size" or moving around the sound stage in 3 axes). I also used Lua scripting and OSC to make the audio scene interactive, responding to user tracking events to trigger audio.

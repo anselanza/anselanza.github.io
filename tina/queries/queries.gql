@@ -24,6 +24,7 @@ query pageQuery {
         id
         title
         excerpt
+        heroImg
         _sys {
           filename
         }

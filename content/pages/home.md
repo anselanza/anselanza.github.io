@@ -4,12 +4,14 @@ blocks:
   - tagline: 'Smoke and mirrors, code and magic'
     headline: Stephen Buchanan
     text: >
-      I am happy to call myself a Creative Technologist, but not in the sense of
-      “a designer with some hacky coding skills”.
+      I call myself a Creative Technologist. 
+
+
+      Does that mean “a designer with some hacky coding skills”? Not in my case.
 
 
       I have the software engineering capabilities and in-depth experience
-      required to turn ideas into reality.
+      required to turn creative ideas into pragmatic reality.
     actions:
       - label: View Projects
         type: button
@@ -26,34 +28,33 @@ blocks:
     _template: hero
   - items:
       - icon:
-          name: BiCodeBlock
-          color: red
+          name: BiPalette
+          color: yellow
           style: float
-        title: Amazing Feature
+        title: Generalist
         text: >-
-          Aliquam blandit felis rhoncus, eleifend ipsum in, condimentum nibh.
-          Praesent ac faucibus risus, eu lacinia enim.
+          I learn fast and come up with solutions. I have worked in teams of
+          creative professionals for almost 20 years, and I know how to find
+          pragmatic approaches for high-imagination projects. 
       - icon:
-          name: BiLike
+          name: BiCodeBlock
           color: primary
           style: float
-        title: This Is a Feature
-        text: Vestibulum ante ipsum primis in faucibus orci luctus et ultrices.
+        title: Serious coder
+        text: >-
+          My specialty is web development, but also Rust and NodeJS. I'm
+          comfortable with Machine Learning, microcontrollers or visual
+          programming environments.
       - icon:
-          name: BiPalette
+          name: BiSpeaker
           color: green
           style: float
-        title: Configurable Theme
+        title: Media Tech Expertise
         text: >-
-          Edit global theme configuration with Tina. Change your theme's primary
-          color, font, or icon set.
+          If it has screens, lights, cameras, sound, generative graphics or
+          sensors, I'm interested. I have deep expertise in immersive
+          installations, events and media technology.
     color: tint
     _template: features
-  - quote: >-
-      There are only two hard things in Computer Science: cache invalidation and
-      naming things.
-    author: Phil Karlton
-    color: primary
-    _template: testimonial
 ---
 
