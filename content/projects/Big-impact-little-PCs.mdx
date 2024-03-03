@@ -1,0 +1,27 @@
+---
+title: 'Big impact, little PC''s'
+heroImg: /uploads/move2zero.jpeg
+excerpt: >
+  Sometimes a handful of Raspberry Pis' are all the "media player" you need. I
+  tied together a webcam, some C, some NodeJS, and the built-in omxplayer to
+  make a cheap-but-reliable container-scanning solution. The result was a fake
+  "X-ray" display for a real conveyor belt.
+tags:
+  - installations
+  - metrics
+  - nodejs
+  - c
+  - pi
+---
+
+This was a project initiated in the height of COVID-19 lockdown restrictions in Paris, so **getting onsite was near-impossible**. The design was for a **conveyor belt** (real, moving) which carried boxes of recycled material past (fake, motion graphics) "X-ray displays" which showed new shoes being formed from old stuff.
+
+The concept was simple but I knew it would be worthwhile to build in some extra features for the sake of easier setup and reduced maintenance. I wanted to make it flexible, in case the order of the boxes changed at the last minute, or the conveyor belt speed varied over time. I also wanted to be sure that it would run 24 hours a day without any embarrassing glitches visible from the Champs-Élysées!
+
+![](/uploads/move2zero-diagram.png)To keep things "light", I didn't even run a Desktop environment on the Pi's. I modified an application written in C for efficiently reading QR codes using a webcam, and made it spit out single-character labels for each of the boxes that passed overhead. The string output was read by a NodeJS application which in turn communicated via DBUS (standard IPC on Linux) to control video playback using omxplayer which is highly optimised for the Raspberry Pi's onboard video decoder. There was a little bit of complexity involved to achieve seamless transitions between looping and "one-shot" video clips on demand, so I actually made each Pi play two video layers simultaneously and fade between them.
+
+To manage all this safely, I used a solid process manager ([PM2](https://pm2.keymetrics.io/)) and implemented custom metrics using Datadog. Yes, I really did count *every successful scan* *with corresponding label* and every possible error; I did not want any surprises. I also wrote a simple library [printemps](https://github.com/RandomStudio/printemps) to make it easier to keep an eye on CPU/GPU temperatures throughout the day, since the installation was situated in front of a large window that let in a lot of sunlight.
+
+The NodeJS+omxplayer library I wrote for the Raspberry Pi media player is at [https://github.com/RandomStudio/omxconductor](https://github.com/RandomStudio/omxconductor) although Raspberry Pi's are much better at playing video these days (including in-browser) so there isn't as much use for it. I learned how to use DBUS to control the omxplayer process remotely from NodeJS, which was interesting.
+
+More detail at [https://random.studio/projects/nike-move-to-zero-house-of-innovation-takeover](https://random.studio/projects/nike-move-to-zero-house-of-innovation-takeover)
