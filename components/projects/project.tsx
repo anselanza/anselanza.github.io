@@ -2,7 +2,6 @@ import React from "react";
 import { Container } from "../util/container";
 import { Section } from "../util/section";
 import { useTheme } from "../layout";
-import format from "date-fns/format";
 import { ProjectType } from "../../pages/projects/[filename]";
 import { tinaField } from "tinacms/dist/react";
 import { TinaMarkdown } from "tinacms/dist/rich-text";
@@ -44,6 +43,7 @@ export const Project = (props: ProjectType) => {
           <TinaMarkdown content={props.excerpt} />
         </Container>
       )}
+
       {props.heroImg && (
         <div className="w-full px-4">
           <div
@@ -72,8 +72,41 @@ export const Project = (props: ProjectType) => {
         </div>
       </Container>
       <Container width="small" size="small">
-        Tags:
-        {props.tags?.map((tag, index) => <span> {tag}</span>)}
+        {props.blocks?.map((block, i) => {
+          switch (block.__typename) {
+            case "ProjectBlocksVimeo":
+              return (
+                <React.Fragment key={i + block.__typename}>
+                  <div
+                    style={{ padding: "56.25% 0 0 0", position: "relative" }}
+                  >
+                    <iframe
+                      src={`https://player.vimeo.com/video/${block.id}?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479`}
+                      frameBorder="0"
+                      allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+                      style={{
+                        position: "absolute",
+                        top: 0,
+                        left: 0,
+                        width: "100%",
+                        height: "100%",
+                      }}
+                      title={block.title}
+                    ></iframe>
+                  </div>
+                  <script src="https://player.vimeo.com/api/player.js"></script>
+                </React.Fragment>
+              );
+            default:
+              return null;
+          }
+        })}
+      </Container>
+      <Container width="small" size="small">
+        Tags:x
+        {props.tags?.map((tag, index) => (
+          <span key={`tag-${index}`}> {tag}</span>
+        ))}
       </Container>
     </Section>
   );

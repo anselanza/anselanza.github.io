@@ -1,4 +1,5 @@
 import type { Collection } from "tinacms";
+import vimeoEmbed from "../../components/blocks/vimeoEmbed";
 
 const Project: Collection = {
   label: "Projects",
@@ -43,6 +44,13 @@ const Project: Collection = {
       ui: {
         component: "tags",
       },
+    },
+    {
+      type: "object",
+      list: true,
+      name: "blocks",
+      label: "Sections",
+      templates: [vimeoEmbed],
     },
   ],
 };
