@@ -1,10 +1,16 @@
 ---
-title: Nike Kids Pod
+title: Body Controlled game in-store
 heroImg: /uploads/nike-kids-pod.jpg
 excerpt: >
-  Apart from designing much of the **system architecture** for this
+  Apart from designing much of the **system architecture** for this Nike Paris
   installation, I also programmed **WebGL graphics** for this game and wrote a
   custom **multi-channel web audio** library.
 ---
 
-A body-control interface (using 6x Microsoft Azure Kinect devices) connected to a 360-degree "infinite scrolling" game on LED displays.
+There was a lot of hardware to manage on this project. A body-control interface (using 6x Microsoft Azure Kinect devices) connected to a 360-degree "infinite scrolling" game on LED displays. There were 6 Windows PCs (for tracking) and 1 Ubuntu Linux PC (for graphics output, lighting control and sound).
+
+The "Kinect Game" concept was not exactly new by the time we built this installation (2020), but this was a well-executed concept, delivered in an unusual screen format. We also had to get to grips with Microsoft's latest iteration of its body control device, the Azure Kinect, which required a lot more on-host GPU processing than its more "standalone" predecessor.
+
+I enjoyed using my favourite GPU-accelerated library for 2D graphics in the browser - [PixiJS](https://pixijs.com/) - for this mini game. We made good use of spritesheets and custom shaders to get the appropriate retro-gaming aesthetic. I have since used this library for many other project - because often 2D is all you really need! - and lately it has begun to embrace WebGPU so the future looks good.
+
+Since we wanted to localise sound to "where you were standing" in this 360-degree screen setup, I needed to output more than just two channels of audio. Since discrete output channels are a bit unwieldy in typical web audio libraries, I wrote my own ([https://github.com/RandomStudio/multi-speaker-web](https://github.com/RandomStudio/multi-speaker-web)) and this allowed me to do very basic ambisonic-type panning which was ideal.

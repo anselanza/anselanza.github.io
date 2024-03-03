@@ -1,0 +1,18 @@
+---
+title: A fake rendering of a real view
+heroImg: /uploads/chanel-salon.jpeg
+excerpt: >
+  I learned a whole new C++ framework to generate this 3D view of the Place
+  Vendôme, with time-travel capabilities.
+tags:
+  - c++
+  - graphics
+---
+
+The final image is not very high resolution (the output was from high dot-pitch LED modules mounted in the windows), but it was surprisingly effective once some diffusion and real curtains were added.
+
+The venue was the headquarters of Chanel in Paris, which really does have a commanding view of the Place Vendôme. We "replaced" it with its digital counterpart in order to give it time-travel abilities - the theme for this launch event was time, so the digital version could be remotely commanded to execute fast "timelapse" effects to match the time of day mentioned in an accompanying video installation.
+
+A colleague and I learned a whole new C++ framework ([NAP](https://nap-framework.tech/)) which arguably wasn't absolutely the best choice for the job, but we were excited about its data-driven programming and OpenGL rendering capabilities, and we knew the people who had developed it. Getting this project done entailed writing a lot of **GLSL shader code** and wrapping our heads around a sophisticated **Entity Component System** architecture.
+
+It also involved my favourite kind of pseudo-3D VFX tricks such as drawing car headlight beams in Photoshop and incorporating these into a very convincing "car traffic particle system". This simple trick really sold the "timelapse" effect as the cars sped up and slowed down dynamically on cue with the rest of the audiovisual show that was going on (driven by [Disguise/D3](https://www.disguise.one/en) media servers).

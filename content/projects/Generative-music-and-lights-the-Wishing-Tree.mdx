@@ -1,0 +1,39 @@
+---
+title: 'Generative music and lights: the Wishing Tree'
+heroImg: /uploads/wish-tree.jpeg
+excerpt: >
+  An installation for a flagship Boucheron store in Tokyo. An interactive
+  "shrine" turned users' messages and scribbles into a unique generative music
+  piece.
+tags:
+  - typescript
+  - rust
+  - lighting
+  - audio
+  - music
+  - ableton
+  - installation
+  - tether
+---
+
+There were three aspects of this project which I worked on: a generative music system, dynamic light control and prototyping the user interface.
+
+## Generative music system
+
+My background in music performance and theory helped enormously on this project. I developed a system that could turn an arbitrary set of vector strokes into a set of rhythmic musical phrases expressed in pitches selected from a traditional Japanese scale. This part of the system was written in TypeScript, utilising the [ToneJS](https://tonejs.github.io/) library.
+
+A professional composer produced the final notes (as samples), which I then used inside Ableton Live to create a software instrument. I created a custom Ableton project where notes from each "chime" (track) could be randomly delayed and repeated, resulting in a pleasant wind chime-like cascading echo effect. This turned the somewhat random melodies into interesting circular rhythms.
+
+Each "wind chime" on the tree was a separate, custom-built speaker enclosed in brass. There were 7 of these speakers in each tree, and I assigned separate output channels to each chime. The music generation algorithm would attempt to keep "one note per chime" as far as possible, so that individual pitches within a given melody would localise to specific physical speakers. This resulted in a delightful spatialised audio experience for the user.
+
+## Dynamic Light Control with Rust+Nannou
+
+The light show to accompany the music needed to have some very specific qualities, so I developed a custom control system in Rust, using the [Nannou](https://nannou.cc/) creative coding framework. I wanted the lights to follow the sound in a very direct way spatially (light up close to where each note was being emitted) and then propagate via neighbouring lights in a kind of rippling pattern.
+
+![](/uploads/particle-lights.jpeg)
+
+It was a pleasure to develop a visual tool like this in Rust, where sophisticated animation effects could be tried out and tweaked, and then run on production machines located nearly 10,000km away without the slightest concern about stability or memory issues.
+
+## Interface Prototype
+
+The final interface on the iPad for each installation was completed by a colleague, but I built the initial prototype web application myself. This was a React+TypeScript project, and apart from the music-generation algorithm described earlier, it also needed to incorporate vector drawing and line-simplification (I used [PaperJS](http://paperjs.org/)) and, of course, used [Tether](https://github.com/RandomStudio/tether) to communicate with the Ableton Live music system and the lighting control.

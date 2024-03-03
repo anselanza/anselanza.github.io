@@ -1,0 +1,32 @@
+---
+title: Transforming a space with the colours of your outfit
+heroImg: /uploads/farfetch.jpg
+excerpt: >
+  This project for online fashion outlet Farfetch was beautifully simple in its
+  concept but required some serious technology to make it work.
+tags:
+  - lighting
+  - graphics
+  - webgl
+  - pixijs
+  - react
+  - typescript
+  - computer-vision
+  - machine-learning
+---
+
+This project ended up requiring TensorFlow JS body segmentation, K-means clustering, Vantage-Point trees and a ton of WebGL graphics. Oh, and it needed to be finished in 6 weeks and delivered on site in Miami, Florida *without the option to even go on site in-person.*
+
+Thankfully, I didn't have to reinvent ML body segmentation (thanks, TensorFlow) or K-means clustering (thanks, Colorthief), or Vantage Point Trees (thanks, vptree) but I did have to know that these existed, what they could do, and figure out how to incorporate them into my proposed solution.
+
+The body segmentation was needed so that the webcams above each screen could separate the person from the background. I also needed to select pixels from specific body areas to get the best chance of finding clothing items in order to perform colour analysis (instead of, for example, getting skin colours).
+
+Next, these pixels could be handed to Colorthief which essentially runs a clustering+quantisation algorithm to figure out the prominent colours in each region. A sort of pixellated "silhouette" of the user was drawn on screen with the relevant colours, to provide instant feedback while the system initiated an image search in the background...
+
+The "palettes" for the user were then used to perform searches (within milliseconds) across a dataset of photography (FarFetch products) which had been run through a similar body segmentation + colour palette analysis - and, yes, I had to build that data processing pipeline, too. And a system to allow human reviewers to browse and manually mark unsuitable images.
+
+Close matches could then be loaded into a special dynamic "grid" of imagery, separated into lower/middle/upper body regions of the screen, to produce beautiful collages whose colours reflected the person standing in front of that screen.
+
+Finally, an additional PixiJS canvas used colour matches to generate a continuously-evolving "particle system" of slow-moving shapes to drive an enormous LED-matrix lighting system diffused behind the entire back wall of the space.
+
+More detail at [https://random.studio/projects/an-immersive-lounge-installation-for-farfetch-x-art-basel](https://random.studio/projects/an-immersive-lounge-installation-for-farfetch-x-art-basel)

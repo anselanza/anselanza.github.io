@@ -1,0 +1,27 @@
+---
+title: 'Pi''s on rails and lots of lasers: CP Company Exhibitions'
+heroImg: /uploads/cp-milan.jpeg
+excerpt: >
+  My main focus was building the technology behind the custom screens-on-rails
+  exhibition pieces. A highly mechanical user interface blended seamlessly with
+  digital graphics and sound.
+---
+
+The main challenge here was building a robust mechanical user interface (5 individually-movable sections in each of the 4 units) that could be integrated with the custom-built structure *without having physical access to the fixtures until the day of on-site installation.*
+
+I decided early on that anything which added moving parts or fiddly calibration was too risky. We would have no time to make big changes once all the aluminium hardware had been manufactured and assembled. Instead, I chose a "touchless" solution, with very accurate - and reasonably inexpensive - Garmin 1D LIDAR-Lite rangefinders.
+
+Calibration on site would therefore be a simple matter of pulling each display unit to its maximum left and right stop points, and letting my software do the rest. 3D-printed enclosures, which I also designed myself, would ensure that the lasers were precisely aligned along each rail to measure position throughout their range and not interfere with one another.
+
+To make the onsite setup even easier, the entire system was wireless. Each of the 20 Garmin LIDAR units was paired with an ESP32 microcontroller with WiFi - and used Tether to relay measurements. That meant we only needed to provide a little power over micro-USB to each unit, greatly simplifying the installation cabling.
+
+The rest of the system comprised 5 Raspberry Pi's - 1 "server" (hosting the MQTT broker, an nginx web server and a reverse proxy service for remote management) and 4x overclocked Pi's outputting graphics, video and sound on 65 inch displays at each unit. These tiny PC's were of course easy to mount on the back of each  display, and connected with WiFi. All media was presented in Chromium in the form of a web application that also provided a custom CMS so we could manage the considerable amount of media provided by the client.
+
+This system ran flawlessly for two multi-day events in Darwen, UK and Milan, Italy. Setup on site was painless and Datadog analytics allowed us to keep an eye on the system from Amsterdam once we had left each location behind.
+
+I worked on a bunch of other aspects of this exhibition as well, including video content for a WatchOut multi-screen (+ lighting) exhibition, projections and an automated slideshow.
+
+More detail:
+
+* the Milan version of the exhibition at [https://random.studio/projects/an-archival-experience-celebrating-c-p-companys-50th-anniversary-milan-edition](https://random.studio/projects/an-archival-experience-celebrating-c-p-companys-50th-anniversary-milan-edition)
+* the Darwen version at [https://random.studio/projects/an-archival-experience-celebrating-c-p-companys-50th-anniversary](https://random.studio/projects/an-archival-experience-celebrating-c-p-companys-50th-anniversary)
