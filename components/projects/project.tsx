@@ -39,6 +39,11 @@ export const Project = (props: ProjectType) => {
           </span>
         </h2>
       </Container>
+      {props.excerpt && (
+        <Container width="small" size="small">
+          <TinaMarkdown content={props.excerpt} />
+        </Container>
+      )}
       {props.heroImg && (
         <div className="w-full px-4">
           <div
