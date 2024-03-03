@@ -1,0 +1,31 @@
+---
+title: Discreet multi-user tracking
+heroImg: /uploads/paco-beauty.jpeg
+excerpt: >
+  For this project, I refined our in-house LIDAR tracking solution and designed
+  a 3D printed enclosure just big enough to hide the sensors.
+tags:
+  - installation
+  - tether
+  - lidar
+---
+
+I had some say in the overall approach for the graphics on this job (written in C++ and GLSL, using openFrameworks) but my main role in this project was to sort out hardware in general and **user tracking** in particular.
+
+The installation featured massive (floor to ceiling) LED displays in a surprisingly small "box" inside this smart Paris store, and some mirrors to make it feel even bigger.
+
+The end result was a delightful "trick", because although it looked as if each person's silhouette was being drawn in sunset-video "pixels", in fact there was no full-body tracking going on at all. We simply moved around pre-drawn silhouette masks lined up with the user for each screen. That meant we only really needed to track positions on the floor.
+
+Perhaps we could have done this kind of tracking using cameras, or depth sensors (e.g. Kinect). But the incredibly tight dimensions of the room, coupled with the mirror reflections and the bright displays made these types of solutions incredibly difficult to implement in practice. Where would you hide the cameras? Where would you get a wide enough view of everyone in the tiny room? How would you reliably ignore reflections from the mirror walls?
+
+I insisted, from early on in this project, that we simply rely on LIDAR sensors at floor level. Since very few humans are known to levitate, we should have a reliable and unobstructed view of their ankles most of the time across the entire tracking area.
+
+![](/uploads/paco-sketch.jpg)
+
+Two LIDARS were enough to cover the floor area and deal with most occlusion scenarios. I designed a 3D-printed enclosure (painted pink to blend in) which deliberately restricted the viewable angle of each sensor to about 90° of its full angular range. A tiny variation in sensor height ensured that they wouldn't directly interfere with each other.
+
+![](/uploads/enclosure-views.jpg)
+
+The rest was handled superbly by our existing "LIDAR consolidation" application (which used NodeJS in this installation; later I re-wrote the whole thing in Rust) and the openFrameworks application only needed to deal with nice, clean 2D tracking coordinates, delivered via Tether (of course).
+
+Finally, I also insisted that we use Ubuntu Linux instead of Windows for the PC running the show, and openFrameworks made that kind of portability feasible. 
