@@ -103,7 +103,7 @@ export const Project = (props: ProjectType) => {
         })}
       </Container>
       <Container width="small" size="small">
-        Tags:x
+        Tags:{" "}
         {props.tags?.map((tag, index) => (
           <span key={`tag-${index}`}> {tag}</span>
         ))}
