@@ -1,7 +1,7 @@
 ---
 title: About
 blocks:
-  - body: >+
+  - body: >
       # The Soft Skills
 
 
@@ -34,7 +34,6 @@ blocks:
       (interaction, spatial, graphic) designers, project managers, artists,
       musicians, sound designers, (event) production companies, technicians,
       clients
-
 
 
       Worked as: developer, system architect, on-site installer, consultant,
@@ -100,6 +99,8 @@ blocks:
 
       * Warp Terminal + ZSH
 
+      * Git, GitHub
+
       * Ableton Live
 
       * Adobe Audition, Premiere
@@ -113,9 +114,6 @@ blocks:
       * MadMapper
 
       * Datadog (analytics, monitoring)
-
-
-
 
 
       ## Hardware
@@ -163,8 +161,6 @@ blocks:
 
       * Single-board computers, e.g. Raspberry Pi and Nvidia Jetson
       (Nano/Xavier)
-
-
     _template: content
 ---
 
