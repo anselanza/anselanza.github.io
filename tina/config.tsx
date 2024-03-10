@@ -6,6 +6,12 @@ import Author from "./collection/author";
 import Page from "./collection/page";
 import Project from "./collection/project";
 
+console.log(
+  "******* relevant vars:",
+  process.env.NEXT_PUBLIC_TINA_CLIENT_ID,
+  process.env.TINA_TOKEN,
+);
+
 const config = defineConfig({
   clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID!,
   branch: "main",
