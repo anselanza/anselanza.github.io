@@ -109,6 +109,8 @@ blocks:
 
       * Xcode
 
+      * ffmpeg
+
       * Figma, Sketch, PhotoShop
 
       * MadMapper
