@@ -10,8 +10,7 @@ console.log(
   "******* relevant vars:",
   process.env.NEXT_PUBLIC_TINA_CLIENT_ID,
   process.env.TINA_TOKEN,
-  process.env.TINA_TOKEN ===
-    "TINA_TOKEN=a7ae074b5898a7fa476321a72b7efc3b878862a3",
+  process.env.TINA_TOKEN.length,
 );
 
 const config = defineConfig({
