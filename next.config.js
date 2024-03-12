@@ -13,6 +13,7 @@ module.exports = {
       {
         source: "/",
         destination: "/home",
+        basePath: true,
       },
       {
         source: "/admin",
