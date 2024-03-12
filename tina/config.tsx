@@ -6,16 +6,6 @@ import Author from "./collection/author";
 import Page from "./collection/page";
 import Project from "./collection/project";
 
-console.log(
-  "******* relevant vars:",
-  process.env.NEXT_PUBLIC_TINA_CLIENT_ID,
-  process.env.NEXT_PUBLIC_TINA_CLIENT_ID ==
-    "53d69c8b-a3b2-4823-ae8c-f6e48f18a4b6",
-  process.env.NEXT_PUBLIC_TINA_CLIENT_ID.length,
-  process.env.TINA_TOKEN,
-  process.env.TINA_TOKEN == "a7ae074b5898a7fa476321a72b7efc3b878862a3",
-);
-
 const config = defineConfig({
   clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID!,
   branch: "main",
