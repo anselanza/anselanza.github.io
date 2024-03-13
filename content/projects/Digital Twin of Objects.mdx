@@ -1,0 +1,42 @@
+---
+title: Digital Twin of Objects
+heroImg: /uploads/dtoo-projection.jpg
+excerpt: >
+  This research project got me into training custom ML models for computer
+  vision, and integrating 3D tracking with embedded IMU electronics.
+tags:
+  - computer-vision
+  - machine-learning
+  - electronics
+  - sensors
+  - ai
+blocks:
+  - id: '922837757'
+    title: X-ray effect with 3D tracking
+    _template: vimeo
+  - id: '922836774'
+    title: UX for Digital Twin of Objects
+    _template: vimeo
+---
+
+
+This was an "experiment" or in-house research project, tentatively named "Digital Twin of Objects". The idea was to explore how to represent and interact with a digital mirror image of any object (e.g. a product) on screen.
+
+This is not a new problem, but hardware solutions for precisely tracking objects in space - for example, using triangulation with radio, or enhanced GPS - tend to be complex and expensive. Some approaches make sense at large scale, outdoors (e.g. drones), but it gets very challenging when you need to track something small in a space that has no line-of-sight to GPS satellites.
+
+On the technical side of this project, I devised a hybrid solution: Machine-Learning computer vision for positional tracking, and embedded IMU sensing for accurate rotation and fast movements (acceleration). I chose to use the [Oak-D](https://shop.luxonis.com/products/oak-d) camera so that I would be able to track in 3D (including "depth").
+
+Working like this allowed the technologies to complement each other:
+
+* IMU (accelerometers plus magnetometer/gyro)
+  * STRENGTHS: Accurate and fast rotational data, highly sensitive for small movements (acceleration)
+  * WEAKNESSES: Attempting to add acceleration over time for positional tracking ("dead reckoning") will inevitably drift
+* Computer Vision (with aligned depth camera)
+  * WEAKNESSES: Difficult to determine rotation of an object in any reliable way, especially for certain shapes.
+  * STRENGTHS: A well-trained object recognition model should be able to determine bounds (in 2D) quickly and reliably. Any errors could be smoothed and filtered.
+
+![](/uploads/dtoo-object-bounds.jpg)
+
+We had a fairly generic "oloid" shaped dummy object to experiment with. I embedded an ESP32 microcontroller and an [Adafruit 9-DOF sensor](https://www.adafruit.com/product/2472) and powered it with a small Li-ion battery. Data was sent over WiFi using the Tether system I had helped to develop in-house.
+
+I used YoloV6 as the basis for a custom-trained model.
