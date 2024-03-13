@@ -6,7 +6,7 @@ import { Layout } from "../components/layout";
 import { client } from "../tina/__generated__/client";
 
 export default function HomePage(
-  props: InferGetStaticPropsType<typeof getStaticProps>,
+  props: InferGetStaticPropsType<typeof getStaticProps>
 ) {
   const { data } = useTina(props);
 
@@ -34,10 +34,7 @@ export const getStaticPaths = async () => {
   const pagesListData = await client.queries.pageConnection();
   return {
     paths: pagesListData.data.pageConnection?.edges?.map((page) => ({
-      params: {
-        filename:
-          page?.node?._sys.filename == "home" ? "/" : page.node._sys.filename,
-      },
+      params: { filename: page?.node?._sys.filename },
     })),
     fallback: false,
   };
