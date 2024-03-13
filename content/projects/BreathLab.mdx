@@ -1,0 +1,23 @@
+---
+title: Breath Lab
+heroImg: /uploads/breathlab-intro.jpg
+excerpt: >
+  A project for Nike House of Innovation in Paris, featuring contactless breath
+  detection and an interactive screens+lights+sound experience.
+---
+
+How do you track someone's breathing in realtime, without attaching anything to their body or even requiring them to touch anything at all?
+
+We solved this using a combination of thermal cameras and machine learning. In infrared, it's easy to spot the temperature change in a person's nostrils when they breathe in and out; the tricky part was getting a computer to recognise this phenomenon and reliably classify "inhale" and "exhale" states a few times a second.
+
+I used the popular \[YOLO Real-time Object Detection system]\([https://pjreddie.com/darknet/yolo/](https://pjreddie.com/darknet/yolo/)) as a basis. We captured videos of "people breathing" in our offices and produced thousands of black-and-white frames to serve as training data. The manual labelling process took about 3 days, and training on a RTX 2070 took about 2 hours.
+
+![](/uploads/labelling-0.1-2.gif)
+
+The model performed exceptionally well, and with some conversion into TensorRT format, I managed to get it running at a reliable 9 frames per second (the maximum refresh rate of the camera we had) on relatively inexpensive Jetson Nano single-board computers. 
+
+![](/uploads/thermal-uncovered.jpg)
+
+In parallel, all kinds of other software had to be built (in React/TypeScript, Rust, NodeJS) and hardware integrated (moveable DMX fixtures, projectors, iPads and a Mac Mini). The installation had to run completely unattended in the store for about 6 weeks, so testing and remote monitoring was essential.
+
+![](/uploads/breathlab-metrics.jpg)
