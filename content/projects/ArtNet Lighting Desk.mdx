@@ -1,0 +1,35 @@
+---
+title: 'An ArtNet lighting desk, in Rust'
+heroImg: /uploads/artnet-controller.jpg
+excerpt: >
+  I couldn't find the right application for my lighting-control needs on a
+  specific project, so I wrote my own. It has already proven useful far beyond
+  the original project it was made for.
+tags:
+  - dmx
+  - lighting
+  - rust
+---
+
+
+ArtNet for IP-based DMX lighting control is not new. But that doesn't mean that the right tool for the job, in terms of software, is always ready to just pick up and use.
+
+There is plenty of software aimed at "show control" (e.g. for stage events) such as grandMA, and also "pixel mapping" (turning video/graphics into DMX output), such as the excellent MadMapper. But I had some particular requirements:
+
+1. I needed to be able to control things remotely, from other software.
+2. I wanted to control movement (pan, tilt, zoom) for moveable fixtures in addition to setting colour/brightness values.
+3. I would have no access to the actual fixtures in use for the final installation, only some very different models with similar capabilities for testing.
+4. I would have very little time to set up scenes and do deep integration, so I would need to be able to work at a very high level and translate this into a workable interactive/dynamic "light show" in very little time on site.
+
+The other thing I've encountered very often with lighting software, particularly ArtNet, is that the basics - which channel controls which parameter on which fixture? - are almost impossible to access without a hardware lighting desk. There are some generic "utility" apps which do monitoring, and some highly complex (and expensive) systems to create whole shows, but almost nothing that lets you *twiddle some knobs and see what does what!*
+
+So built a desktop application in Rust (with Egui for the UI) which really nailed all the features I needed:
+
+* An accessible "setup" mode where you could literally drag sliders randomly and see what channels were connected to
+* A set of DMX fixture configurations in JSON where I could store (and label!) every feature and parameter, based on the user manuals for each fixture
+* Project files saving collections of fixtures and scenes
+* A scene-building system, where preset "states" could be saved
+* A very high-level control system: "macros" connected to commonly-used parameters regardless of the specific fixture, and "scenes" which could also be partially-applied (e.g. to groups of fixtures instead of the whole system)
+* Remote-control via Tether messages, for integration with other applications
+* A headless mode where the system could easily be managed by a process manager and kept alive without user intervention
+* MIDI integration for live control/setup for a more tactile interface
