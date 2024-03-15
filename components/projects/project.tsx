@@ -27,7 +27,7 @@ export const Project = (props: ProjectType) => {
       <Container width="small" className={`flex-1 pb-2`} size="large">
         <h2
           data-tina-field={tinaField(props, "title")}
-          className={`title-font relative	mb-8 w-full text-center text-6xl font-extrabold tracking-normal`}
+          className={`title-font relative	mb-8 w-full text-center font-extrabold tracking-normal lg:text-6xl`}
         >
           <span
             className={`bg-gradient-to-r bg-clip-text text-transparent ${

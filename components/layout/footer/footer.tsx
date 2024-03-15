@@ -45,10 +45,10 @@ export const Footer = ({ data, icon, rawData }) => {
   return (
     <footer className={`bg-gradient-to-br ${footerColorCss}`}>
       <Container className="relative" size="small">
-        <div className="flex justify-between items-center gap-6 flex-wrap">
+        <div className="flex flex-wrap items-center justify-between gap-6">
           <Link
             href="/"
-            className="group mx-2 flex items-center font-bold tracking-tight text-gray-400 dark:text-gray-300 opacity-50 hover:opacity-100 transition duration-150 ease-out whitespace-nowrap"
+            className="group mx-2 flex items-center whitespace-nowrap font-bold tracking-tight text-gray-400 opacity-50 transition duration-150 ease-out hover:opacity-100 dark:text-gray-300"
           >
             <Icon
               parentColor={data.color}
@@ -63,7 +63,7 @@ export const Footer = ({ data, icon, rawData }) => {
           <div className="flex gap-4">
             {data.social && data.social.facebook && (
               <a
-                className="inline-block opacity-80 hover:opacity-100 transition ease-out duration-150"
+                className="inline-block opacity-80 transition duration-150 ease-out hover:opacity-100"
                 href={data.social.facebook}
                 target="_blank"
               >
@@ -78,7 +78,7 @@ export const Footer = ({ data, icon, rawData }) => {
             )}
             {data.social && data.social.twitter && (
               <a
-                className="inline-block opacity-80 hover:opacity-100 transition ease-out duration-150"
+                className="inline-block opacity-80 transition duration-150 ease-out hover:opacity-100"
                 href={data.social.twitter}
                 target="_blank"
               >
@@ -93,7 +93,7 @@ export const Footer = ({ data, icon, rawData }) => {
             )}
             {data.social && data.social.instagram && (
               <a
-                className="inline-block opacity-80 hover:opacity-100 transition ease-out duration-150"
+                className="inline-block opacity-80 transition duration-150 ease-out hover:opacity-100"
                 href={data.social.instagram}
                 target="_blank"
               >
@@ -108,7 +108,7 @@ export const Footer = ({ data, icon, rawData }) => {
             )}
             {data.social && data.social.github && (
               <a
-                className="inline-block opacity-80 hover:opacity-100 transition ease-out duration-150"
+                className="inline-block opacity-80 transition duration-150 ease-out hover:opacity-100"
                 href={data.social.github}
                 target="_blank"
               >
@@ -122,12 +122,12 @@ export const Footer = ({ data, icon, rawData }) => {
               </a>
             )}
           </div>
-          <RawRenderer parentColor={data.color} rawData={rawData} />
+          {/* <RawRenderer parentColor={data.color} rawData={rawData} /> */}
         </div>
         <div
           className={`absolute h-1 bg-gradient-to-r from-transparent ${
             data.color === "primary" ? `via-white` : `via-black dark:via-white`
-          } to-transparent top-0 left-4 right-4 opacity-5`}
+          } left-4 right-4 top-0 to-transparent opacity-5`}
         ></div>
       </Container>
     </footer>

@@ -25,14 +25,15 @@
   "footer": {
     "color": "default",
     "social": {
-      "facebook": "/",
-      "twitter": "/",
-      "instagram": "/"
+      "facebook": "",
+      "twitter": "",
+      "instagram": "https://www.instagram.com/anselan/",
+      "github": "https://github.com/anselanza"
     }
   },
   "theme": {
-    "color": "blue",
+    "color": "teal",
     "font": "sans",
-    "darkMode": "system"
+    "darkMode": "light"
   }
 }

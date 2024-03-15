@@ -65,12 +65,12 @@ export const Header = ({ data }: { data: GlobalHeader }) => {
     <div
       className={`relative overflow-hidden bg-gradient-to-b ${headerColorCss}`}
     >
-      <Container size="custom" className="py-0 relative z-10 max-w-8xl">
+      <Container size="custom" className="max-w-8xl relative z-10 py-0">
         <div className="flex items-center justify-between gap-6">
-          <h4 className="select-none text-lg font-bold tracking-tight my-4 transition duration-150 ease-out transform">
+          <h4 className="my-4 transform select-none text-sm font-bold tracking-tight transition duration-150 ease-out">
             <Link
               href="/"
-              className="flex gap-1 items-center whitespace-nowrap tracking-[.002em]"
+              className="flex items-center gap-1 whitespace-nowrap tracking-[.002em]"
             >
               <Icon
                 tinaField={tinaField(data, "icon")}
@@ -81,10 +81,15 @@ export const Header = ({ data }: { data: GlobalHeader }) => {
                   style: data.icon.style,
                 }}
               />
-              <span data-tina-field={tinaField(data, "name")}>{data.name}</span>
+              <span
+                className="hidden lg:block"
+                data-tina-field={tinaField(data, "name")}
+              >
+                {data.name}
+              </span>
             </Link>
           </h4>
-          <ul className="flex gap-6 sm:gap-8 lg:gap-10 tracking-[.002em] -mx-4">
+          <ul className="-mx-4 flex gap-0 tracking-[.002em] lg:gap-10">
             {data.nav &&
               data.nav.map((item, i) => {
                 const activeItem =
@@ -101,14 +106,14 @@ export const Header = ({ data }: { data: GlobalHeader }) => {
                     <Link
                       data-tina-field={tinaField(item, "label")}
                       href={`/${item.href}`}
-                      className={`relative select-none	text-base inline-block tracking-wide transition duration-150 ease-out hover:opacity-100 py-8 px-4 ${
+                      className={`relative inline-block	select-none px-4 py-8 text-xs tracking-wide transition duration-150 ease-out hover:opacity-100 lg:text-base ${
                         activeItem ? `` : `opacity-70`
                       }`}
                     >
                       {item.label}
                       {activeItem && (
                         <svg
-                          className={`absolute bottom-0 left-1/2 w-[180%] h-full -translate-x-1/2 -z-1 opacity-10 dark:opacity-15 ${
+                          className={`-z-1 absolute bottom-0 left-1/2 h-full w-[180%] -translate-x-1/2 opacity-10 dark:opacity-15 ${
                             activeBackgroundClasses[theme.color]
                           }`}
                           preserveAspectRatio="none"
@@ -152,7 +157,7 @@ export const Header = ({ data }: { data: GlobalHeader }) => {
         <div
           className={`absolute h-1 bg-gradient-to-r from-transparent ${
             data.color === "primary" ? `via-white` : `via-black dark:via-white`
-          } to-transparent bottom-0 left-4 right-4 -z-1 opacity-5`}
+          } -z-1 bottom-0 left-4 right-4 to-transparent opacity-5`}
         />
       </Container>
     </div>
