@@ -4,7 +4,7 @@ blocks:
   - tagline: 'Smoke and mirrors, code and magic'
     headline: Stephen Buchanan
     text: >
-      I am a Creative Technologisy.
+      I am a Creative Technologist.
 
 
       Does that mean “a designer with some hacky coding skills”? Fortunately,
