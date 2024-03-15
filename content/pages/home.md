@@ -4,14 +4,16 @@ blocks:
   - tagline: 'Smoke and mirrors, code and magic'
     headline: Stephen Buchanan
     text: >
-      I call myself a Creative Technologist. 
+      I am a Creative Technologisy.
 
 
-      Does that mean “a designer with some hacky coding skills”? Not in my case.
+      Does that mean “a designer with some hacky coding skills”? Fortunately,
+      that doesn't really describe what I do.
 
 
       I have the software engineering capabilities and in-depth experience
-      required to turn creative ideas into pragmatic reality.
+      required to turn creative ideas, no matter how ambitious, into pragmatic
+      reality.
     actions:
       - label: View Projects
         type: button
