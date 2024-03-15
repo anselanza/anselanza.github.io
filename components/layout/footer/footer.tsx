@@ -107,6 +107,21 @@ export const Footer = ({ data, icon, rawData }) => {
               </a>
             )}
           </div>
+          <div className="text-center text-xs">
+            I built this site using:
+            <span>
+              <a
+                className="ttext-teal-600 font-semibold transition duration-150 ease-out"
+                href="https://tina.io/"
+              >
+                TinaCMS
+              </a>
+              ,{" "}
+            </span>
+            <span>React+TypeScript, </span>
+            <span>NextJS, </span>
+            <span>GitHub Pages</span>
+          </div>
           {/* <RawRenderer parentColor={data.color} rawData={rawData} /> */}
         </div>
         <div
