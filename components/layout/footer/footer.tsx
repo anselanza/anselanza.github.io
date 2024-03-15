@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { FaFacebookF, FaGithub, FaTwitter } from "react-icons/fa";
-import { AiFillInstagram } from "react-icons/ai";
+import { AiFillInstagram, AiFillLinkedin } from "react-icons/ai";
 import { Container } from "../../util/container";
 import { RawRenderer } from "./rawRenderer";
 import { useTheme } from "..";
@@ -61,28 +61,13 @@ export const Footer = ({ data, icon, rawData }) => {
             />
           </Link>
           <div className="flex gap-4">
-            {data.social && data.social.facebook && (
+            {data.social && data.social.linkedin && (
               <a
                 className="inline-block opacity-80 transition duration-150 ease-out hover:opacity-100"
-                href={data.social.facebook}
+                href={data.social.linkedin}
                 target="_blank"
               >
-                <FaFacebookF
-                  className={`${socialIconClasses} ${
-                    socialIconColorClasses[
-                      data.color === "primary" ? "primary" : theme.color
-                    ]
-                  }`}
-                />
-              </a>
-            )}
-            {data.social && data.social.twitter && (
-              <a
-                className="inline-block opacity-80 transition duration-150 ease-out hover:opacity-100"
-                href={data.social.twitter}
-                target="_blank"
-              >
-                <FaTwitter
+                <AiFillLinkedin
                   className={`${socialIconClasses} ${
                     socialIconColorClasses[
                       data.color === "primary" ? "primary" : theme.color

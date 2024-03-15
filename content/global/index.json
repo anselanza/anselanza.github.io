@@ -5,7 +5,7 @@
       "color": "orange",
       "style": "float"
     },
-    "name": "steveebee",
+    "name": "Stephen Buchanan",
     "color": "default",
     "nav": [
       {
@@ -25,15 +25,14 @@
   "footer": {
     "color": "default",
     "social": {
-      "facebook": "",
-      "twitter": "",
+      "linkedin": "https://www.linkedin.com/in/stephendbuchanan/",
       "instagram": "https://www.instagram.com/anselan/",
       "github": "https://github.com/anselanza"
     }
   },
   "theme": {
     "color": "teal",
-    "font": "sans",
+    "font": "lato",
     "darkMode": "light"
   }
 }

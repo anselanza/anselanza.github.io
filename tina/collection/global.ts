@@ -81,13 +81,8 @@ const Global: Collection = {
           fields: [
             {
               type: "string",
-              label: "Facebook",
-              name: "facebook",
-            },
-            {
-              type: "string",
-              label: "Twitter",
-              name: "twitter",
+              label: "LinkedIn",
+              name: "linkedin",
             },
             {
               type: "string",
