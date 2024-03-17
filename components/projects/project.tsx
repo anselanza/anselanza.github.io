@@ -78,7 +78,11 @@ export const Project = (props: ProjectType) => {
               return (
                 <React.Fragment key={i + block.__typename}>
                   <div
-                    style={{ padding: "56.25% 0 0 0", position: "relative" }}
+                    style={{
+                      padding: "56.25% 0 0 0",
+                      position: "relative",
+                      margin: "1em",
+                    }}
                   >
                     <iframe
                       src={`https://player.vimeo.com/video/${block.id}?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479`}

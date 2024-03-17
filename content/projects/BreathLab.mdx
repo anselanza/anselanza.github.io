@@ -5,6 +5,10 @@ excerpt: >
   A project for Nike House of Innovation in Paris, featuring **contactless
   breath detection** (using thermal cameras and Machine Learning) and an
   interactive screens+lights+sound experience.
+blocks:
+  - id: '924415271'
+    title: Lights breathing
+    _template: vimeo
 ---
 
 How do you track someone's breathing in realtime, without attaching anything to their body or even requiring them to touch anything at all?
@@ -24,3 +28,7 @@ In parallel, all kinds of other software had to be built (in React/TypeScript, R
 ![](/uploads/breathlab-metrics.jpg)
 
 To service this project's lighting needs, I wrote my own DMX fixture control software, which you can read about [here](/projects/ArtNet%20Lighting%20Desk).
+
+Two GLP Impression X5 "wash" lights and two Cameo Opus S5 spots were controlled by a single NodeJS service which could trigger scenes as well as adjust individual parameters based on realtime breathing information. It felt magical to stand inside the sphere and have the lights pulse in and out in time with your breathing.
+
+![](/uploads/breathlab-sketches.jpg)

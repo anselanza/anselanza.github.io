@@ -12,6 +12,13 @@ tags:
   - rust
   - installations
   - tether
+blocks:
+  - id: '924417421'
+    title: Tether CLI
+    _template: vimeo
+  - id: '924417407'
+    title: Tether GUI with MIDI
+    _template: vimeo
 ---
 
 After years of building interactive installations and similar projects, I noticed that there was a lot of reinventing the wheel going on. Having diverse teams (creative coders, web developers, and designers who couldn't code at all), it seemed counterproductive to insist that everyone use the same framework, programming language or application. Every new project demanded new skills and new tools, and while I have always enjoyed learning new things, these fast-paced projects could often be chaotic. It felt like so little of our work was reusable from one project to the next.
@@ -29,5 +36,6 @@ The main benefits of working this way turned out to be:
 1. We could re-use lots of code, applications and services between projects.
 2. We could choose the "right tool for the job" each time, inserting a little bit of interface/bridging code if necessary to get it to work with the rest of our Tether-based systems.
 3. Development, testing, setup (on site) and troubleshooting became significantly easier because everything was talking the same language and all messaging in the system was easy to inspect.
+4. We could record and play back real message data to simulate complex systems without needing all the hardware plugged in.
 
 In the process, I solidified my understanding of the challenges underlying these kinds of projects: distributed computing, state management and event-based asynchronous programming.
