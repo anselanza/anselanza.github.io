@@ -24,8 +24,8 @@ export const Hero = ({ data }: { data: PageBlocksHero }) => {
   return (
     <Section color={data.color}>
       <Container
-        size="small md:large"
-        className="grid grid-cols-1 items-center justify-center gap-14 md:grid-cols-5"
+        size="large"
+        className="grid grid-cols-1 items-center justify-center gap-2 md:grid-cols-5 md:gap-14"
       >
         <div className="row-start-2 text-center md:col-span-3 md:row-start-1 md:text-left">
           {data.tagline && (

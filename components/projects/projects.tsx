@@ -34,7 +34,7 @@ export const Projects = ({ data }: { data: ProjectsType[] }) => {
               }`}
             >
               {project.title}{" "}
-              <span className="inline-block opacity-0 transition-all duration-300 ease-out group-hover:opacity-100">
+              <span className="hidden opacity-0 transition-all duration-300 ease-out group-hover:opacity-100 lg:inline-block">
                 <BsArrowRight className="-mt-1 ml-1 inline-block h-8 w-auto opacity-70" />
               </span>
             </h3>
