@@ -10,19 +10,15 @@ blocks:
 
       * Permanent and temporary installations
 
-      * Window displays
-
-      * Popup stores
-
-      * Exhibitions
-
-      * Product launches
+      * Window displays, popup stores, exhibitions, product launches
 
       * Prototype/experimental browser-based interfaces
 
       * Live events such as conferences, corporate “roadshows”
 
       * Prototype fixtures/spatial design concepts
+
+      * Websites, games
 
       * Software tooling and reusable applications to support all of the above
 
