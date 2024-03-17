@@ -24,26 +24,26 @@ export const Hero = ({ data }: { data: PageBlocksHero }) => {
   return (
     <Section color={data.color}>
       <Container
-        size="large"
-        className="grid grid-cols-1 md:grid-cols-5 gap-14 items-center justify-center"
+        size="small md:large"
+        className="grid grid-cols-1 items-center justify-center gap-14 md:grid-cols-5"
       >
-        <div className="row-start-2 md:row-start-1 md:col-span-3 text-center md:text-left">
+        <div className="row-start-2 text-center md:col-span-3 md:row-start-1 md:text-left">
           {data.tagline && (
             <h2
               data-tina-field={tinaField(data, "tagline")}
-              className="relative inline-block px-3 py-1 mb-8 text-md font-bold tracking-wide title-font z-20"
+              className="text-md title-font relative z-20 mb-8 inline-block px-3 py-1 font-bold tracking-wide"
             >
               {data.tagline}
-              <span className="absolute w-full h-full left-0 top-0 rounded-full -z-1 bg-current opacity-7"></span>
+              <span className="-z-1 opacity-7 absolute left-0 top-0 h-full w-full rounded-full bg-current"></span>
             </h2>
           )}
           {data.headline && (
             <h3
               data-tina-field={tinaField(data, "headline")}
-              className={`w-full relative	mb-10 text-5xl font-extrabold tracking-normal leading-tight title-font`}
+              className={`title-font relative	mb-10 w-full text-5xl font-extrabold leading-tight tracking-normal`}
             >
               <span
-                className={`bg-clip-text text-transparent bg-gradient-to-r  ${
+                className={`bg-gradient-to-r bg-clip-text text-transparent  ${
                   data.color === "primary"
                     ? `from-white to-gray-100`
                     : headlineColorClasses[theme.color]
@@ -56,7 +56,7 @@ export const Hero = ({ data }: { data: PageBlocksHero }) => {
           {data.text && (
             <div
               data-tina-field={tinaField(data, "text")}
-              className={`prose prose-lg mx-auto md:mx-0 mb-10 ${
+              className={`prose prose-lg mx-auto mb-10 md:mx-0 ${
                 data.color === "primary" ? `prose-primary` : `dark:prose-dark`
               }`}
             >
@@ -65,7 +65,7 @@ export const Hero = ({ data }: { data: PageBlocksHero }) => {
           )}
           {data.actions && (
             <Actions
-              className="justify-center md:justify-start py-2"
+              className="justify-center py-2 md:justify-start"
               parentColor={data.color}
               actions={data.actions}
             />
@@ -74,15 +74,15 @@ export const Hero = ({ data }: { data: PageBlocksHero }) => {
         {data.image && (
           <div
             data-tina-field={tinaField(data.image, "src")}
-            className="relative row-start-1 md:col-span-2 flex justify-center"
+            className="relative row-start-1 flex justify-center md:col-span-2"
           >
             <img
-              className="absolute w-full rounded-lg max-w-xs md:max-w-none h-auto blur-2xl brightness-150 contrast-[0.9] dark:brightness-150 saturate-200 opacity-50 dark:opacity-30 mix-blend-multiply dark:mix-blend-hard-light"
+              className="absolute h-auto w-full max-w-xs rounded-lg opacity-50 mix-blend-multiply blur-2xl brightness-150 contrast-[0.9] saturate-200 md:max-w-none dark:opacity-30 dark:mix-blend-hard-light dark:brightness-150"
               src={data.image.src}
               aria-hidden="true"
             />
             <img
-              className="relative z-10 w-full max-w-xs rounded-lg md:max-w-none h-auto"
+              className="relative z-10 h-auto w-full max-w-xs rounded-lg md:max-w-none"
               alt={data.image.alt}
               src={data.image.src}
             />
