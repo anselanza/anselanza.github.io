@@ -113,6 +113,8 @@ blocks:
 
       * Datadog (analytics, monitoring)
 
+      * TouchDesigner, Cables.GL
+
 
       ## Hardware
 
