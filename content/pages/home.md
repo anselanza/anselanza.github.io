@@ -24,7 +24,7 @@ blocks:
         icon: false
         link: /about
     image:
-      src: /uploads/pink-portrait-sm.jpg
+      src: /uploads/portrait-lighter.jpeg
       alt: Portrait
     color: default
     _template: hero
