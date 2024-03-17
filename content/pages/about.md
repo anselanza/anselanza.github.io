@@ -2,10 +2,7 @@
 title: About
 blocks:
   - body: >
-      # The Soft Skills
-
-
-      ## Project Experience
+      # Project Experience
 
 
       * Permanent and temporary installations
@@ -23,22 +20,28 @@ blocks:
       * Software tooling and reusable applications to support all of the above
 
 
-      ## Team Roles
+      # Team Roles
 
 
-      Worked with: junior and senior developers, (executive) creative directors,
-      (interaction, spatial, graphic) designers, project managers, artists,
-      musicians, sound designers, (event) production companies, technicians,
-      clients
+      ### Worked as:
 
 
-      Worked as: developer, system architect, on-site installer, consultant,
+      Developer, system architect, on-site installer, consultant,
       troubleshooter, mentor, manager, technical lead, (motion graphics, web)
       designer, sound designer, lighting designer, video editor, project
       manager, copywriter, network administrator, technical documentation writer
 
 
-      ## Technology Niches
+      ### Worked with:
+
+
+      Junior and senior developers, (executive) creative directors,
+      (interaction, spatial, graphic) designers, project managers, artists,
+      musicians, sound designers, (event) production companies, technicians,
+      clients
+
+
+      # Technology Niches
 
 
       Distributed computing architecture
@@ -69,10 +72,10 @@ blocks:
       Multi-user game development
 
 
-      # The Hard Skills
+      #
 
 
-      ## Programming Languages and Frameworks
+      # Programming Languages and Frameworks
 
 
       * TypeScript (React especially on the frontend, NodeJS for backends,
@@ -88,7 +91,7 @@ blocks:
       * Java (mostly in the context of Processing)
 
 
-      ## Software Applications and Services
+      # Software Applications and Services
 
 
       * VSCode, Zed
@@ -116,7 +119,7 @@ blocks:
       * TouchDesigner, Cables.GL
 
 
-      ## Hardware
+      # Hardware
 
 
       ### Electronics and sensors
