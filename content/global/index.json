@@ -2,7 +2,7 @@
   "header": {
     "icon": {
       "name": "BiPlayCircle",
-      "color": "orange",
+      "color": "pink",
       "style": "float"
     },
     "name": "Stephen Buchanan",
@@ -31,7 +31,7 @@
     }
   },
   "theme": {
-    "color": "teal",
+    "color": "pink",
     "font": "lato",
     "darkMode": "light"
   }

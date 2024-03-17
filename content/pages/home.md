@@ -24,7 +24,7 @@ blocks:
         icon: false
         link: /about
     image:
-      src: /uploads/visa-photo.JPG
+      src: /uploads/pink-portrait-sm.jpg
       alt: Portrait
     color: default
     _template: hero
