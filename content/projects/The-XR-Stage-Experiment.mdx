@@ -1,0 +1,17 @@
+---
+title: The XR Stage Experiment
+excerpt: >
+  I contributed some high speed (90fps) head tracking on this prototype "mixed
+  reality" display system.
+blocks:
+  - id: '927472307'
+    title: First person view
+    _template: vimeo
+  - id: '927472285'
+    title: XR 3rd person view
+    _template: vimeo
+---
+
+A scene in Unreal gets rendered from the point of view of a moving camera - in this case, a human visitor. A version of this setup is now common in "virtual stage" setups, but getting it right for realtime interaction requires very fast and accurate tracking in 3D.
+
+I enjoyed getting a version of [Hyperpose](https://github.com/tensorlayer/HyperPose) compiled and running on a Nvidia Jetson Xavier - a single board computer with very powerful onboard AI/GPU hardware. I hooked up an industrial imaging camera from Basler to get the highest possible framerate.

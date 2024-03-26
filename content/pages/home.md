@@ -4,16 +4,15 @@ blocks:
   - tagline: 'Smoke and mirrors, code and magic'
     headline: Stephen Buchanan
     text: >
-      I am a Creative Technologist.
+      I have had many roles and titles, but they all come down to this: **making
+      wonderful things using technology**.
 
 
-      Does that mean “a designer with some hacky coding skills”? Fortunately,
-      that doesn't really describe what I do.
-
-
-      I have the software engineering capabilities and in-depth experience
-      required to turn creative ideas, no matter how ambitious, into pragmatic
-      reality.
+      At the moment, my title is "Creative Technologist". Does that mean “a
+      designer with some hacky coding skills”? Fortunately, that doesn't really
+      describe what I do. I have the software engineering capabilities and
+      in-depth experience required to turn big ideas, no matter how ambitious,
+      into pragmatic reality.
     actions:
       - label: View Projects
         type: button
