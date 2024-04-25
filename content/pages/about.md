@@ -2,80 +2,7 @@
 title: About
 blocks:
   - body: >
-      # Project Experience
-
-
-      * Permanent and temporary installations
-
-      * Window displays, popup stores, exhibitions, product launches
-
-      * Prototype/experimental browser-based interfaces
-
-      * Live events such as conferences, corporate “roadshows”
-
-      * Prototype fixtures/spatial design concepts
-
-      * Websites, games
-
-      * Software tooling and reusable applications to support all of the above
-
-
-      # Team Roles
-
-
-      ### Worked as:
-
-
-      Developer, system architect, on-site installer, consultant,
-      troubleshooter, mentor, manager, technical lead, (motion graphics, web)
-      designer, sound designer, lighting designer, video editor, project
-      manager, copywriter, network administrator, technical documentation writer
-
-
-      ### Worked with:
-
-
-      Junior and senior developers, (executive) creative directors,
-      (interaction, spatial, graphic) designers, project managers, artists,
-      musicians, sound designers, (event) production companies, technicians,
-      clients
-
-
-      # Technology Niches
-
-
-      Distributed computing architecture
-
-
-      Embedded systems
-
-
-      MQTT
-
-
-      Audio: sound design, spatial audio, generative, music
-
-
-      Rust for WGPU, Desktop UI, MQTT
-
-
-      Web development, including for non-web applications (PWA, graphics, data
-      visualisation)
-
-
-      2D WebGL / WebGPU
-
-
-      Low-power sustainable tech
-
-
-      Multi-user game development
-
-
-      #
-
-
-      # Programming Languages and Frameworks
+      # Favourite Programming Languages and Technologies
 
 
       * TypeScript (React especially on the frontend, NodeJS for backends,
@@ -90,8 +17,10 @@ blocks:
 
       * Java (mostly in the context of Processing)
 
+      * Linux and Docker
 
-      # Software Applications and Services
+
+      # Favourite Software Applications and Services
 
 
       * VSCode, Zed
@@ -164,6 +93,45 @@ blocks:
 
       * Single-board computers, e.g. Raspberry Pi and Nvidia Jetson
       (Nano/Xavier)
+
+
+      # Project Experience
+
+
+      * Permanent and temporary installations
+
+      * Window displays, popup stores, exhibitions, product launches
+
+      * Prototype/experimental browser-based interfaces
+
+      * Live events such as conferences, corporate “roadshows”
+
+      * Prototype fixtures/spatial design concepts
+
+      * Websites, games
+
+      * Software tooling and reusable applications to support all of the above
+
+
+      # Team Roles
+
+
+      ### Worked as:
+
+
+      Developer, system architect, on-site installer, consultant,
+      troubleshooter, mentor, manager, technical lead, (motion graphics, web)
+      designer, sound designer, lighting designer, video editor, project
+      manager, copywriter, network administrator, technical documentation writer
+
+
+      ### Worked with:
+
+
+      Junior and senior developers, (executive) creative directors,
+      (interaction, spatial, graphic) designers, project managers, artists,
+      musicians, sound designers, (event) production companies, technicians,
+      clients
     _template: content
 ---
 
