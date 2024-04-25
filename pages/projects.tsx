@@ -5,7 +5,7 @@ import { client } from "../tina/__generated__/client";
 import { Layout } from "../components/layout";
 import { InferGetStaticPropsType } from "next";
 
-export default function HomePage(
+export default function ProjectListPage(
   props: InferGetStaticPropsType<typeof getStaticProps>,
 ) {
   const projects = props.data.projectConnection.edges;
@@ -22,10 +22,13 @@ export default function HomePage(
 }
 
 export const getStaticProps = async () => {
-  const tinaProps = await client.queries.pageQuery();
+  const projectsResponse = await client.queries.projectConnection();
+  // console.log(projectsResponse.data.projectConnection.edges.length);
+
+  // const tinaProps = await client.queries.pageQuery();
   return {
     props: {
-      ...tinaProps,
+      ...projectsResponse,
     },
   };
 };

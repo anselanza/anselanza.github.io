@@ -39,11 +39,8 @@ export const getStaticProps = async ({ params }) => {
 };
 
 /**
- * To build the blog post pages we just iterate through the list of
- * posts and provide their "filename" as part of the URL path
- *
- * So a blog post at "content/posts/hello.md" would
- * be viewable at http://localhost:3000/posts/hello
+ * To build the Project pages we just iterate through the list of
+ * Projects and provide their "filename" as part of the URL path
  */
 export const getStaticPaths = async () => {
   const projectsListData = await client.queries.projectConnection();

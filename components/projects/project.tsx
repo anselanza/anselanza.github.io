@@ -2,7 +2,7 @@ import React from "react";
 import { Container } from "../util/container";
 import { Section } from "../util/section";
 import { useTheme } from "../layout";
-import { ProjectType } from "../../pages/projects/[filename]";
+import { ProjectType } from "../../pages/project/[filename]";
 import { tinaField } from "tinacms/dist/react";
 import { TinaMarkdown } from "tinacms/dist/rich-text";
 
