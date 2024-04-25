@@ -2,9 +2,10 @@ import React from "react";
 import { Container } from "../util/container";
 import { Section } from "../util/section";
 import { useTheme } from "../layout";
-import { ProjectType } from "../../pages/project/[filename]";
+import { ProjectType } from "../../pages/projects/[filename]";
 import { tinaField } from "tinacms/dist/react";
 import { TinaMarkdown } from "tinacms/dist/rich-text";
+import Link from "next/link";
 
 export const Project = (props: ProjectType) => {
   const theme = useTheme();
@@ -27,7 +28,7 @@ export const Project = (props: ProjectType) => {
       <Container width="small" className={`flex-1 pb-2`} size="large">
         <h2
           data-tina-field={tinaField(props, "title")}
-          className={`title-font relative	mb-8 w-full text-center font-extrabold tracking-normal lg:text-6xl`}
+          className={`title-font relative	mb-8 w-full text-center font-extrabold tracking-normal lg:text-6xl leading-none`}
         >
           <span
             className={`bg-gradient-to-r bg-clip-text text-transparent ${
@@ -109,7 +110,15 @@ export const Project = (props: ProjectType) => {
       <Container width="small" size="small">
         Tags:{" "}
         {props.tags?.map((tag, index) => (
-          <span key={`tag-${index}`}> {tag}</span>
+          <span>
+            <Link
+              className="underline text-orange-200"
+              key={`tag-${index}`}
+              href={`/tags/${tag}`}
+            >
+              {tag}
+            </Link>{" "}
+          </span>
         ))}
       </Container>
     </Section>
