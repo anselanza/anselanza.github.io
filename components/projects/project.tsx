@@ -114,7 +114,7 @@ export const Project = (props: ProjectType) => {
             <Link
               className="underline text-orange-200"
               key={`tag-${index}`}
-              href={`/tags/${tag}`}
+              href={`/projects/?tag=${tag}`}
             >
               {tag}
             </Link>{" "}

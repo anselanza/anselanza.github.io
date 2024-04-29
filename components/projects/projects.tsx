@@ -5,7 +5,13 @@ import { BsArrowRight } from "react-icons/bs";
 import { useTheme } from "../layout";
 import { ProjectsType } from "../../pages/projects";
 
-export const Projects = ({ data }: { data: ProjectsType[] }) => {
+export const Projects = ({
+  data,
+  tag,
+}: {
+  data: ProjectsType[];
+  tag?: string;
+}) => {
   const theme = useTheme();
   const titleColorClasses = {
     blue: "group-hover:text-blue-600 dark:group-hover:text-blue-300",
@@ -18,9 +24,27 @@ export const Projects = ({ data }: { data: ProjectsType[] }) => {
     yellow: "group-hover:text-yellow-500 dark:group-hover:text-yellow-300",
   };
 
+  const projectsList = tag
+    ? data.filter((p) => {
+        if (p.node?.tags) {
+          return p.node.tags.includes(tag);
+        } else {
+          return false;
+        }
+      })
+    : data;
+
   return (
     <>
-      {data.map((projectData) => {
+      {tag ? (
+        <h1 className="title-font lg:text-3xl relative	mb-8">
+          Listing projects with tag "{tag}"...
+        </h1>
+      ) : (
+        ""
+      )}
+
+      {projectsList.map((projectData) => {
         const project = projectData.node;
         return (
           <Link
