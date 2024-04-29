@@ -28,7 +28,7 @@ export default function ProjectListPage(
 }
 
 export const getStaticProps = async ({ params }) => {
-  console.log({ params });
+  // console.log({ params });
   const projectsResponse = await client.queries.projectConnection({
     filter: {
       tags: { in: [params.filename] },
