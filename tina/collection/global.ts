@@ -99,6 +99,11 @@ const Global: Collection = {
               label: "Github",
               name: "github",
             },
+            {
+              type: "string",
+              label: "YouTube",
+              name: "youtube",
+            },
           ],
         },
       ],
