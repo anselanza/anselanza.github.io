@@ -110,7 +110,7 @@ export const Project = (props: ProjectType) => {
       <Container width="small" size="small">
         Tags:{" "}
         {props.tags?.map((tag, index) => (
-          <span>
+          <span key={`span-tag-${index}`}>
             <Link
               className="underline text-orange-200"
               key={`tag-${index}`}
