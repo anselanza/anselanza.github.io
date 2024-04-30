@@ -2,50 +2,61 @@
 title: About
 blocks:
   - body: >
+      I'm a software engineer with unconventional career experience. I know how
+      to make impossible things possible, whether on my own or with great teams.
+
+
+      The details you can find on my [CV](</uploads/Stephen CV 5.3.pdf> "CV").
+      This page has a much more random list of things I like.
+
+
       # Favourite Programming Languages and Technologies
 
 
       * TypeScript (React especially on the frontend, NodeJS for backends,
       scripting and other services)
 
-      * Rust (Nannou, egui)
+      * Rust ([Nannou](https://nannou.cc/ "nannou"), egui)
 
-      * C++ (especially openFrameworks, but also Arduino/Platform.IO)
+      * C++ (especially [openFrameworks](https://openframeworks.cc/ "oF"), but
+      also Arduino/Platform.IO)
 
       * Python (for Machine Learning training and inference, also TouchDesigner
       scripting)
 
-      * Java (mostly in the context of Processing)
+      * Java (mostly in the context of [Processing](https://processing.org/
+      "Processing"))
 
       * Linux and Docker
+
+      * WebGL+GLSL shaders, but I'm learning [W(eb)GPU](https://wgpu.rs/
+      "WGPU")+WGLSL fast as I can
 
 
       # Favourite Software Applications and Services
 
 
-      * VSCode, Zed
+      * VSCode, [Zed](https://zed.dev/ "Zed")
 
-      * Warp Terminal + ZSH
+      * [Warp Terminal](https://www.warp.dev/ "Warp") + ZSH
 
-      * Git, GitHub
+      * Git, GitHub, [LazyGit](https://github.com/jesseduffield/lazygit)
 
-      * Ableton Live
+      * [Ableton Live](https://www.ableton.com/en/live/)
 
       * Adobe Audition, Premiere
 
       * Rhino 7
 
-      * Xcode
-
-      * ffmpeg
+      * [ffmpeg](https://ffmpeg.org/)
 
       * Figma, Sketch, PhotoShop
 
-      * MadMapper
+      * [MadMapper](https://madmapper.com/)
 
       * Datadog (analytics, monitoring)
 
-      * TouchDesigner, Cables.GL
+      * TouchDesigner, [Cables.GL](https://cables.gl/)
 
 
       # Hardware
@@ -54,7 +65,7 @@ blocks:
       ### Electronics and sensors
 
 
-      * Microcontrollers: Arduino, ESP32, Pi Pico
+      * Microcontrollers: Arduino, ESP32, Pi Pico (RP2040)
 
       * Cameras: webcams, industrial imaging (e.g. FLIR, Basler), infrared,
       thermal
@@ -63,7 +74,8 @@ blocks:
 
       * Proximity and presence detection (RADAR, PIR, sonar)
 
-      * Depth cameras, e.g. Kinect, Luxonis OAK-D, Leap Motion
+      * Depth cameras, e.g. Kinect, [Luxonis
+      OAK-D](https://shop.luxonis.com/products/oak-d), Leap Motion
 
       * IMU (accelerometers, gyros, etc.)
 
@@ -89,49 +101,12 @@ blocks:
 
       * Networking (configuration, routers, remote proxies, WiFi, servers)
 
-      * Custom PCs (preferably Linux)
+      * Custom PCs (preferably Linux, definitely
+      [Pop\_OS!](https://pop.system76.com/) in spite of its silly name)
 
-      * Single-board computers, e.g. Raspberry Pi and Nvidia Jetson
+      * Single-board computers, e.g. Raspberry Pi and [Nvidia
+      Jetson](https://www.nvidia.com/en-us/autonomous-machines/embedded-systems/)
       (Nano/Xavier)
-
-
-      # Project Experience
-
-
-      * Permanent and temporary installations
-
-      * Window displays, popup stores, exhibitions, product launches
-
-      * Prototype/experimental browser-based interfaces
-
-      * Live events such as conferences, corporate “roadshows”
-
-      * Prototype fixtures/spatial design concepts
-
-      * Websites, games
-
-      * Software tooling and reusable applications to support all of the above
-
-
-      # Team Roles
-
-
-      ### Worked as:
-
-
-      Developer, system architect, on-site installer, consultant,
-      troubleshooter, mentor, manager, technical lead, (motion graphics, web)
-      designer, sound designer, lighting designer, video editor, project
-      manager, copywriter, network administrator, technical documentation writer
-
-
-      ### Worked with:
-
-
-      Junior and senior developers, (executive) creative directors,
-      (interaction, spatial, graphic) designers, project managers, artists,
-      musicians, sound designers, (event) production companies, technicians,
-      clients
     _template: content
 ---
 
