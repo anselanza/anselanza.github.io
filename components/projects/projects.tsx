@@ -47,28 +47,40 @@ export const Projects = ({
       {projectsList.map((projectData) => {
         const project = projectData.node;
         return (
-          <Link
-            key={project._sys.filename}
-            href={`/projects/` + project._sys.filename}
-            className="dark:to-gray-1000 group mb-8 block rounded-md bg-gray-50 bg-gradient-to-br from-gray-50 to-gray-100 px-6 py-10 shadow-sm transition-all duration-150 ease-out last:mb-0 hover:to-gray-50 hover:shadow-md sm:px-8 md:px-10 dark:from-gray-900 dark:hover:to-gray-800"
-          >
-            <h3
-              className={`title-font mb-5 text-3xl font-semibold text-gray-700 transition-all duration-150 ease-out lg:text-4xl dark:text-white ${
-                titleColorClasses[theme.color]
-              }`}
+          <div className="container mb-8">
+            <Link
+              key={project._sys.filename}
+              href={`/projects/` + project._sys.filename}
+              className="dark:to-gray-1000 group block rounded-md bg-gray-50 bg-gradient-to-br from-gray-50 to-gray-100 px-6 py-10 shadow-sm transition-all duration-150 ease-out last:mb-0 hover:to-gray-50 hover:shadow-md sm:px-8 md:px-10 dark:from-gray-900 dark:hover:to-gray-800"
             >
-              {project.title}{" "}
-              <span className="hidden opacity-0 transition-all duration-300 ease-out group-hover:opacity-100 lg:inline-block">
-                <BsArrowRight className="-mt-1 ml-1 inline-block h-8 w-auto opacity-70" />
-              </span>
-            </h3>
-            <div className="prose dark:prose-dark mb-5 w-full max-w-none opacity-70">
-              <TinaMarkdown content={project.excerpt} />
-            </div>
-            <div>
-              <img src={project.heroImg} />
-            </div>
-          </Link>
+              <h3
+                className={`title-font mb-5 text-3xl font-semibold text-gray-700 transition-all duration-150 ease-out lg:text-4xl dark:text-white ${
+                  titleColorClasses[theme.color]
+                }`}
+              >
+                {project.title}{" "}
+                <span className="hidden opacity-0 transition-all duration-300 ease-out group-hover:opacity-100 lg:inline-block">
+                  <BsArrowRight className="-mt-1 ml-1 inline-block h-8 w-auto opacity-70" />
+                </span>
+              </h3>
+              <div className="prose dark:prose-dark mb-5 w-full max-w-none opacity-70">
+                <TinaMarkdown content={project.excerpt} />
+              </div>
+              <div>
+                <img src={project.heroImg} />
+              </div>
+            </Link>
+            {project.tags && (
+              <div className="container text-xs text-right italic">
+                {project.tags.map((t, i, arr) => (
+                  <span>
+                    <a href={`?tag=${t}`}>{t}</a>
+                    {i < arr.length - 1 ? ", " : ""}
+                  </span>
+                ))}
+              </div>
+            )}
+          </div>
         );
       })}
     </>
