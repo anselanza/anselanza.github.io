@@ -43,7 +43,10 @@ export const Footer = ({ data, icon, rawData }) => {
       : footerColor.default;
 
   return (
-    <footer className={`bg-gradient-to-br ${footerColorCss}`} style={{zIndex:1}}>
+    <footer
+      className={`bg-gradient-to-br ${footerColorCss}`}
+      style={{ zIndex: 1 }}
+    >
       <Container className="relative" size="small">
         <div className="flex flex-wrap items-center justify-between gap-6">
           <Link
@@ -138,7 +141,7 @@ export const Footer = ({ data, icon, rawData }) => {
             )}
           </div>
           <div className="text-center text-xs">
-            I built this site using:
+            This custom site built with:{" "}
             <span>
               <a
                 className="ttext-teal-600 font-semibold transition duration-150 ease-out"
@@ -150,7 +153,15 @@ export const Footer = ({ data, icon, rawData }) => {
             </span>
             <span>React+TypeScript, </span>
             <span>NextJS, </span>
-            <span>GitHub Pages</span>
+            <span>GitHub Pages CI/CD and </span>
+            <span>
+              <a
+                className="ttext-teal-600 font-semibold transition duration-150 ease-out"
+                href="https://cables.gl/"
+              >
+                Cables.GL
+              </a>
+            </span>
           </div>
           {/* <RawRenderer parentColor={data.color} rawData={rawData} /> */}
         </div>
