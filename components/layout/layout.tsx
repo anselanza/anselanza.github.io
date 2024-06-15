@@ -40,6 +40,16 @@ export const Layout = ({
             />
           </>
         )}
+        {data.theme.font === "retro" && (
+          <>
+            <link rel="preconnect" href="https://fonts.googleapis.com" />
+            <link rel="preconnect" href="https://fonts.gstatic.com" />
+            <link
+              href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Tiny5&display=swap"
+              rel="stylesheet"
+            />
+          </>
+        )}
       </Head>
       <Theme data={data?.theme}>
         <div
@@ -47,13 +57,24 @@ export const Layout = ({
             data.theme.font === "nunito" && "font-nunito"
           } ${data.theme.font === "lato" && "font-lato"} ${
             data.theme.font === "sans" && "font-sans"
-          }`}
+          } ${data.theme.font === "retro" && "font-retro"}`}
         >
           <Header data={data?.header} />
-          <div style={ {zIndex: 2, pointerEvents: "none"}} className="flex flex-1 flex-col ">
+          <div
+            style={{ zIndex: 2, pointerEvents: "none" }}
+            className="flex flex-1 flex-col "
+          >
             {children}
           </div>
-          <iframe style={ {  position: "fixed", width: "100vw", height: "100vh", zIndex: 1 }} src="https://cables.gl/view/666d4665921a3e8341187c38"></iframe>
+          <iframe
+            style={{
+              position: "fixed",
+              width: "100vw",
+              height: "100vh",
+              zIndex: 1,
+            }}
+            src="https://cables.gl/view/666d4665921a3e8341187c38"
+          ></iframe>
           <Footer
             rawData={rawData}
             data={data?.footer}
