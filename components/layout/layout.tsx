@@ -61,12 +61,14 @@ export const Layout = ({
         >
           <Header data={data?.header} />
           <div
-            style={{ zIndex: 2, pointerEvents: "none" }}
-            className="flex flex-1 flex-col "
+            style={{ zIndex: 2 }}
+            className="flex flex-1 flex-col pointer-events-none"
           >
             {children}
           </div>
+          
           <iframe
+           className="invisible md:visible"
             style={{
               position: "fixed",
               width: "100vw",
