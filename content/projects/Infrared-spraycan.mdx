@@ -1,0 +1,33 @@
+---
+title: Infrared spraycan
+heroImg: /uploads/lv-spraycan-hero.jpg
+excerpt: >
+  An interactive spray can powered by some ordinary batteries and no motion
+  sensors or wireless data. How?
+tags:
+  - electronics
+  - cpp
+  - computer-vision
+blocks:
+  - id: '959011193'
+    title: Projection tests
+    _template: vimeo
+  - id: '959011151'
+    title: Camera tests
+    _template: vimeo
+  - id: '959002553'
+    title: Infrared Spraycan Prototype
+    _template: vimeo
+---
+
+This was a fun prototype, which unfortunately never made it into the final production (an exhibition for Louis Vuitton). The challenge was to make a handheld "spray can" that could be tracked accurately enough to spray or paint patterns onto a digital display surface, preferably without having to use expensive custom hardware. And whatever tech we used had to fit inside a beautifully-crafted custom aluminium can worthy of the Louis Vuitton brand.
+
+The solution I came up with was to turn the spraycan object into a simple infrared light fixture - pushing the button turned on two strong infrared LED sources which were invisible to the naked eye. A single camera was placed above the display surface. This was not a stereo camera, just a high speed industrial imaging camera from Basler with good sensitivity in the near-IR wavelengths. We added an infrared filter to block visible light, so that the camera would typically *only* see the infrared LED sources.
+
+Now for the clever software trick. Knowing the distance between the LEDs, and the optical characteristics of the camera lens, I set up a computer vision algorithm that could approximate the distance from the camera based on the "apparent size" (angular size) of the pair of LEDs in the frame. Combined with some parallax compensation and an "undistortion" calibration using OpenCV, the tracking turned out to be more than good enough over a few metres of tracking space.
+
+![](/uploads/20171006_162312_1.gif)
+
+![](/uploads/20170922_174338_1.gif)
+
+All of the above was written in C++ in the openFrameworks library. Tracking data was published via UDP, to be used in whatever display application we wanted - I set up some openFrameworks and browser-based output to play with, including the fluid simulation (which I adapted from third-party code) to produce the demo seen in the video.
