@@ -83,6 +83,7 @@ export const Project = (props: ProjectType) => {
                       padding: "56.25% 0 0 0",
                       position: "relative",
                       margin: "1em",
+                      pointerEvents: "auto"
                     }}
                   >
                     <iframe
@@ -112,7 +113,7 @@ export const Project = (props: ProjectType) => {
         {props.tags?.map((tag, index) => (
           <span key={`span-tag-${index}`}>
             <Link
-              className="underline text-orange-200"
+              className="pointer-events-auto underline text-orange-200"
               key={`tag-${index}`}
               href={`/projects/?tag=${tag}`}
             >

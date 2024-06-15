@@ -47,11 +47,11 @@ export const Projects = ({
       {projectsList.map((projectData) => {
         const project = projectData.node;
         return (
-          <div className="container mb-8">
+          <div className="container mb-8" >
             <Link
               key={project._sys.filename}
               href={`/projects/` + project._sys.filename}
-              className="dark:to-gray-1000 group block rounded-md bg-gray-50 bg-gradient-to-br from-gray-50 to-gray-100 px-6 py-10 shadow-sm transition-all duration-150 ease-out last:mb-0 hover:to-gray-50 hover:shadow-md sm:px-8 md:px-10 dark:from-gray-900 dark:hover:to-gray-800"
+              className="pointer-events-auto dark:to-gray-1000 group block rounded-md bg-gray-50 bg-gradient-to-br from-gray-50 to-gray-100 px-6 py-10 shadow-sm transition-all duration-150 ease-out last:mb-0 hover:to-gray-50 hover:shadow-md sm:px-8 md:px-10 dark:from-gray-900 dark:hover:to-gray-800"
             >
               <h3
                 className={`title-font mb-5 text-3xl font-semibold text-gray-700 transition-all duration-150 ease-out lg:text-4xl dark:text-white ${
@@ -71,7 +71,7 @@ export const Projects = ({
               </div>
             </Link>
             {project.tags && (
-              <div className="container text-xs text-right italic">
+              <div className="container text-xs text-right italic pointer-events-auto">
                 {project.tags.map((t, i, arr) => (
                   <span>
                     <a href={`?tag=${t}`}>{t}</a>

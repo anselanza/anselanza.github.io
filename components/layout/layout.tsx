@@ -50,9 +50,10 @@ export const Layout = ({
           }`}
         >
           <Header data={data?.header} />
-          <div className="dark:to-gray-1000 flex flex-1 flex-col bg-gradient-to-br from-white to-gray-50 text-gray-800 dark:from-gray-900">
+          <div style={ {zIndex: 2, pointerEvents: "none"}} className="flex flex-1 flex-col ">
             {children}
           </div>
+          <iframe style={ {  position: "fixed", width: "100vw", height: "100vh", zIndex: 1 }} src="https://cables.gl/view/666d4665921a3e8341187c38"></iframe>
           <Footer
             rawData={rawData}
             data={data?.footer}

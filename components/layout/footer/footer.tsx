@@ -43,7 +43,7 @@ export const Footer = ({ data, icon, rawData }) => {
       : footerColor.default;
 
   return (
-    <footer className={`bg-gradient-to-br ${footerColorCss}`}>
+    <footer className={`bg-gradient-to-br ${footerColorCss}`} style={{zIndex:1}}>
       <Container className="relative" size="small">
         <div className="flex flex-wrap items-center justify-between gap-6">
           <Link

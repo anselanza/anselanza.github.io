@@ -63,14 +63,14 @@ export const Header = ({ data }: { data: GlobalHeader }) => {
 
   return (
     <div
-      className={`relative overflow-hidden bg-gradient-to-b ${headerColorCss}`}
+      className={`pointer-events-none relative overflow-hidden bg-gradient-to-b ${headerColorCss}`}
     >
       <Container size="custom" className="max-w-8xl relative z-10 py-0">
         <div className="flex items-center justify-between gap-6">
           <h4 className="my-4 transform select-none text-sm font-bold tracking-tight transition duration-150 ease-out">
             <Link
               href="/"
-              className="flex items-center gap-1 whitespace-nowrap tracking-[.002em]"
+              className="pointer-events-auto flex items-center gap-1 whitespace-nowrap tracking-[.002em]"
             >
               <Icon
                 tinaField={tinaField(data, "icon")}
@@ -106,7 +106,7 @@ export const Header = ({ data }: { data: GlobalHeader }) => {
                     <Link
                       data-tina-field={tinaField(item, "label")}
                       href={`/${item.href}`}
-                      className={`relative inline-block	select-none px-4 py-8 text-xs tracking-wide transition duration-150 ease-out hover:opacity-100 lg:text-base ${
+                      className={`pointer-events-auto relative inline-block	select-none px-4 py-8 text-xs tracking-wide transition duration-150 ease-out hover:opacity-100 lg:text-base ${
                         activeItem ? `` : `opacity-70`
                       }`}
                     >
