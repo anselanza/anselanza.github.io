@@ -4,21 +4,19 @@ blocks:
   - tagline: 'Smoke and mirrors, code and magic'
     headline: Stephen Buchanan
     text: >
+      I'm a **software engineer** with unconventional career experience. I know
+      how to **make impossible things possible**, whether on my own or with
+      great teams.
+
+
       I have had many roles and titles, but they all come down to this: **making
       wonderful things using technology**.
-
-
-      At the moment, my title is Creative Technologist, which means a lot of
-      different things to different people. What it means to me is that I have
-      been able to explore and combine a wide variety of technology
-      specialisations. I've also become really good at helping ambitious teams
-      find pragmatic solutions.
 
 
       The projects you will see here often feature high-minded concepts and
       beautiful aesthetics, but please don't miss that **behind all this is
       carefully-crafted, robust software**. I'd love to help you tackle new
-      challenges and deliver superb results!
+      challenges and deliver superb results.
     actions:
       - label: View Projects
         type: button

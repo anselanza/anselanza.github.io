@@ -2,14 +2,6 @@
 title: About
 blocks:
   - body: >
-      I'm a software engineer with unconventional career experience. I know how
-      to make impossible things possible, whether on my own or with great teams.
-
-
-      The details you can find on my [CV](</uploads/Stephen CV 5.3.pdf> "CV").
-      This page has a much more random list of things I like.
-
-
       # Favourite Programming Languages and Technologies
 
 

@@ -73,7 +73,7 @@ export const Projects = ({
             {project.tags && (
               <div className="container text-xs text-right italic pointer-events-auto">
                 {project.tags.map((t, i, arr) => (
-                  <span>
+                  <span key={`tag-${i}`}>
                     <a href={`?tag=${t}`}>{t}</a>
                     {i < arr.length - 1 ? ", " : ""}
                   </span>
