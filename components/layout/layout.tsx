@@ -6,6 +6,8 @@ import { Theme } from "./theme";
 import layoutData from "../../content/global/index.json";
 import { Global } from "../../tina/__generated__/types";
 
+import {isMobile} from "react-device-detect";
+
 export const Layout = ({
   rawData = {},
   data = layoutData,
@@ -66,7 +68,7 @@ export const Layout = ({
           >
             {children}
           </div>
-          
+          {isMobile === false &&
           <iframe
            className="invisible md:visible"
             style={{
@@ -77,6 +79,7 @@ export const Layout = ({
             }}
             src="https://cables.gl/view/666d4665921a3e8341187c38"
           ></iframe>
+          }
           <Footer
             rawData={rawData}
             data={data?.footer}
