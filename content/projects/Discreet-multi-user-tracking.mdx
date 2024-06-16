@@ -28,6 +28,8 @@ Two LIDARS were enough to cover the floor area and deal with most occlusion scen
 
 The rest was handled superbly by our existing "LIDAR consolidation" application (which used NodeJS in this installation; later I re-wrote the whole thing in Rust) and the openFrameworks application only needed to deal with nice, clean 2D tracking coordinates, delivered via [Tether](/projects/Tether-an-in-house-system-to-make-interactive-installations-easier) (of course).
 
+Translating user positions within a calibration space was done using a bit of linear algebra, in a Rust library I developed myself and split off from the main project: [https://crates.io/crates/quad-to-quad-transformer](https://crates.io/crates/quad-to-quad-transformer) 
+
 Finally, I also insisted that we use Ubuntu Linux instead of Windows for the PC running the show, and openFrameworks made that kind of portability feasible.
 
 More detail at [https://random.studio/projects/endless-sunsets-for-paco-rabanne](https://random.studio/projects/endless-sunsets-for-paco-rabanne)
