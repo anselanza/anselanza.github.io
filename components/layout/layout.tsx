@@ -8,6 +8,8 @@ import { Global } from "../../tina/__generated__/types";
 
 import {isMobile} from "react-device-detect";
 
+import { GoogleAnalytics } from '@next/third-parties/google'
+
 export const Layout = ({
   rawData = {},
   data = layoutData,
@@ -19,6 +21,7 @@ export const Layout = ({
 }) => {
   return (
     <>
+    <GoogleAnalytics gaId="G-30V1PK9J5D" />
       <Head>
         <title>Stephen Buchanan</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
