@@ -8,6 +8,8 @@ blocks:
       * TypeScript (React especially on the frontend, NodeJS for backends,
       scripting and other services)
 
+      * [Vite](https://vitejs.dev/) for bundling
+
       * Rust ([Nannou](https://nannou.cc/ "nannou"), egui)
 
       * C++ (especially [openFrameworks](https://openframeworks.cc/ "oF"), but
