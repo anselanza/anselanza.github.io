@@ -4,6 +4,12 @@ import { useTina } from "tinacms/dist/react";
 import { Layout } from "../../components/layout";
 import { InferGetStaticPropsType } from "next";
 
+export async function generateMetadata({ params }) {
+  const title = `Project: ${params.filename}`
+  return { title };
+}
+
+
 // Use the props returned by get static props
 export default function ProjectPage(
   props: InferGetStaticPropsType<typeof getStaticProps>,

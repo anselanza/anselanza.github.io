@@ -5,6 +5,12 @@ import { useTina } from "tinacms/dist/react";
 import { Layout } from "../components/layout";
 import { client } from "../tina/__generated__/client";
 
+
+export async function generateMetadata({ params }) {
+  const title = `Page: ${params.filename}`
+  return { title };
+}
+
 export default function HomePage(
   props: InferGetStaticPropsType<typeof getStaticProps>
 ) {

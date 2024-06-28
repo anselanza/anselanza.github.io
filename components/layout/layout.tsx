@@ -10,6 +10,7 @@ import {isMobile} from "react-device-detect";
 
 import { GoogleAnalytics } from '@next/third-parties/google'
 
+
 export const Layout = ({
   rawData = {},
   data = layoutData,
