@@ -3,7 +3,7 @@ title: Everybody loves photo(video) booths
 heroImg: /uploads/RND_CHANEL-J12_-01453.jpg
 excerpt: >
   Create a (branded) experience, record a video automatically and send it to the
-  user - how hard can it be? Turns out, it gets complicated quite quickly!
+  user - how hard can it be? Turns out, it gets complicated pretty quickly!
 tags:
   - nodejs
   - fullstack
@@ -47,7 +47,7 @@ To get an almost "life size" image on screen from a very close position, for exa
 
 Industrial cameras are incredibly powerful when you need full control and the highest possible quality, but it does mean interacting with the manufacturer's own specialised SDK (usually in C+++) and doing a large amount of image processing yourself in order to achieve the results you're looking for.
 
-Next you have to do something with all the video frames you've captured and/or generated. Uncompressed image frames (even at "only" full-HD resolution) are surprisingly large - we are so used to compressed image formats such as JPEG that it's easy to forget that the raw information coming off a camera sensor can fill Gigabytes of memory within a few seconds! So buffering (in VRAM, or RAM) often becomes a thing you have to deal with as a developer. Hardware-encoding of video also helps enormously, although you have to be careful to only compress video frames after you've done the processing that requires the uncompressed pixels. Mastering streaming is what it's all about - whether that's USB-to-host, GPU-to-CPU, RAM-to-disk, process-to-process or over the network (e.g. using NDI).
+Next you have to do something with all the video frames you've captured and/or generated. Uncompressed image frames (even at "only" full-HD resolution) are surprisingly large - we are so used to compressed image formats such as JPEG that it's easy to forget that the raw information coming off a camera sensor can fill Gigabytes of memory within a few seconds! So buffering (in VRAM, or RAM) often becomes a thing you have to deal with as a developer. Hardware-encoding of video also helps enormously, although you have to be careful to only compress video frames after you've done the processing that requires the uncompressed pixels. Mastering streaming is what it's all about - whether that's USB-to-host, GPU-to-CPU, RAM-to-disk, process-to-process or over the network (e.g. using [NDI](https://ndi.video/)).
 
 "Editing" or switching between sources and/or titles or pre-generated graphics can either be done live or as part of a server-side process after capturing is completed. I became quite experienced building complex [ffmpeg filter graphs](https://ffmpeg.org/ffmpeg-filters.html) in order to combine streams, apply filters (including audio processing) and encoding for upload.
 
