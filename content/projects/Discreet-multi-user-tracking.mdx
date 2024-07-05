@@ -1,6 +1,6 @@
 ---
-title: Discreet multi-user tracking
-heroImg: /uploads/paco-beauty.jpeg
+title: Hidden full-floor tracking
+heroImg: /uploads/1659602975-benoitflorencon-randomstudio-paco-0507-05 copy.jpg
 excerpt: >
   For this project, I refined our in-house **LIDAR tracking solution** and
   designed a **3D printed enclosure** just big enough to hide the sensors.
@@ -28,7 +28,7 @@ Two LIDARS were enough to cover the floor area and deal with most occlusion scen
 
 The rest was handled superbly by our existing "LIDAR consolidation" application (which used NodeJS in this installation; later I re-wrote the whole thing in Rust) and the openFrameworks application only needed to deal with nice, clean 2D tracking coordinates, delivered via [Tether](/projects/Tether-an-in-house-system-to-make-interactive-installations-easier) (of course).
 
-Translating user positions within a calibration space was done using a bit of linear algebra, in a Rust library I developed myself and split off from the main project: [https://crates.io/crates/quad-to-quad-transformer](https://crates.io/crates/quad-to-quad-transformer) 
+Translating user positions within a calibration space was done using a bit of linear algebra, in a Rust library I developed myself and split off from the main project: [https://crates.io/crates/quad-to-quad-transformer](https://crates.io/crates/quad-to-quad-transformer)
 
 Finally, I also insisted that we use Ubuntu Linux instead of Windows for the PC running the show, and openFrameworks made that kind of portability feasible.
 
