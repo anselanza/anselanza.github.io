@@ -5,8 +5,8 @@ blocks:
     headline: Stephen Buchanan
     text: >
       I'm a **software engineer** with unconventional career experience. I know
-      how to **make impossible things possible**, whether on my own or with
-      great teams.
+      how to **make impossible things possible **- as solo developer or (even
+      better) with great teams.
 
 
       I have had many roles and titles, but they all come down to this: **making
