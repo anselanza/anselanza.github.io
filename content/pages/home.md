@@ -5,7 +5,7 @@ blocks:
     headline: Stephen Buchanan
     text: >
       I'm a **software engineer** with unconventional career experience. I know
-      how to **make impossible things possible **- as solo developer or (even
+      how to **make impossible things possible** - as solo developer or (even
       better) with great teams.
 
 
