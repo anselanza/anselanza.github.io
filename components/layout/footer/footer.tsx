@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { FaGithub, FaYoutube } from "react-icons/fa";
+import { FaGithub, FaMedium, FaYoutube } from "react-icons/fa";
 import { AiFillInstagram, AiFillLinkedin, AiFillMail } from "react-icons/ai";
 import { Container } from "../../util/container";
 import { useTheme } from "..";
@@ -130,6 +130,21 @@ export const Footer = ({ data, icon, rawData }) => {
                 target="_blank"
               >
                 <FaYoutube
+                  className={`${socialIconClasses} ${
+                    socialIconColorClasses[
+                      data.color === "primary" ? "primary" : theme.color
+                    ]
+                  }`}
+                />
+              </a>
+            )}
+            {data.social && data.social.medium && (
+              <a
+                className="inline-block opacity-80 transition duration-150 ease-out hover:opacity-100"
+                href={data.social.medium}
+                target="_blank"
+              >
+                <FaMedium
                   className={`${socialIconClasses} ${
                     socialIconColorClasses[
                       data.color === "primary" ? "primary" : theme.color

@@ -104,6 +104,11 @@ const Global: Collection = {
               label: "YouTube",
               name: "youtube",
             },
+            {
+              type: "string",
+              label: "Medium",
+              name: "medium",
+            },
           ],
         },
       ],
