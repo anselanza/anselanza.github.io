@@ -1,0 +1,54 @@
+---
+title: Technology with a soft touch
+heroImg: /uploads/glossier-console.jpg
+excerpt: >
+  This high profile product launch for Glossier "You Fleur" perfume featured a
+  sophisticated interactive installation that I carefully crafted to make the
+  technology almost disappear from sight.
+blocks:
+  - id: '1072461711'
+    title: Fleur Pavilion FPV
+    _template: vimeo
+---
+
+The multi-day event in Paris was a huge success for our client: see it featured, with plenty of discussion of the "AI in retail" angle, on [Vogue](https://www.vogue.fr/galerie/glossier-you-fleur-premier-pop-up-france-the-wonder-of-you-parfum) (in French), [Forbes](https://www.forbes.com/sites/claraludmir/2025/03/31/glossiers-paris-pop-up-shows-lasting-interest-in-retail-experiences/) and of course on the [website of Random Studio](https://random.studio/projects/an-ai-powered-perfume-launch-for-glossier). The Fleur Pavilion installation I built was the centrepiece of the design, and it delighted visitors with just over 1500 LLM-generated poems over the course of 4 days.
+
+Here it is, in all its subtle glory (is that a oxymoron?):
+
+![](/uploads/IMG_20250326_082123.jpg "See, no computers, electronics or robots anywhere")
+
+But behind all this was a symphony of hardware and software working together.
+
+## Hardware
+
+* Mac Mini
+* Weight sensor with ADC connected to an Arduino
+* 25K lumens projector
+* Logitech Brio webcam
+* 5 DMX fixtures (4 of them could pan/tilt)
+
+![](/uploads/IMG_20250305_141330.jpg)
+
+## A SvelteKit web application
+
+Two main frontend routes, all TypeScript:
+
+* remotely-triggered webcam capture, communicating to a backend that in turn performed requests to OpenAI / ChatGPT
+* text-rendering and live audio-processing, which appeared on the fabric projection, but never really felt like a screen (or, for that matter, a browser tab) 
+
+![](/uploads/IMG_20250327_152500.jpg)
+
+## Some custom Rust applications
+
+* A "soundscape" sequencer for loading and mixing audio files based on remote cues
+* An "ArtNet controller" that allowed us to design animated lighting scenes for the 5 DMX fixtures mounted around the space
+* A serial to Tether (MQTT) interface, for the weight sensor
+* A configurable custom "pavilion brain" with a GUI for loading config, running a state machine and handling all the sensor input (with auto calibration) / cue output (lights, sound, camera control, LLM generation, screen animations)
+
+## Some C++
+
+The Arduino did some simple measurements from the weight/flex sensor and sent these via serial/USB.
+
+## ...And some custom metrics
+
+As usual, I hooked up Datadog, implemented some custom metrics (in the Rust code as well as the TypeScript/SvelteKit parts) to keep an eye on everything and provide reports.
